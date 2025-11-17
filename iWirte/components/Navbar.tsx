@@ -26,17 +26,32 @@ export default function Navbar() {
           <span>iWrite</span>
         </div>
 
+        {isMobileMenuOpen && (
+          <div
+            className={styles.overlay}
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+        )}
+
         <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.open : ''}`}>
-          <Link href="/" className={styles.navLink}>
+          <button
+            className={styles.closeButton}
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
+          <Link href="/" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>
             Home
           </Link>
-          <Link href="/services" className={styles.navLink}>
+          <Link href="/services" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>
             Services
           </Link>
-          <Link href="/contact" className={styles.navLink}>
+          <Link href="/contact" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>
             Contact
           </Link>
-          <Link href="/careers" className={styles.navLink}>
+          <Link href="/careers" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>
             Join Us
           </Link>
         </nav>
