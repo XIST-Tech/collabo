@@ -3,7 +3,6 @@
   background: #fff;
 }
 
-/* Hero Section */
 .hero {
   width: 100%;
   height: 316px;
@@ -69,7 +68,6 @@
   flex-shrink: 0;
 }
 
-/* Controls Bar */
 .controlsBar {
   width: 100%;
   background: #F9F1E7;
@@ -159,7 +157,6 @@
   min-width: 188px;
 }
 
-/* Posts Section */
 .postsSection {
   width: 100%;
   padding: 60px 100px;
@@ -327,7 +324,6 @@
   margin: 0;
 }
 
-/* Pagination */
 .pagination {
   display: flex;
   align-items: center;
@@ -376,7 +372,6 @@
   background: #ede4d6;
 }
 
-/* Features Section */
 .featuresSection {
   width: 100%;
   background: #FAF3EA;
@@ -420,7 +415,6 @@
   margin: 0;
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
   .postsGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -456,42 +450,89 @@
   }
 
   .controlsBar {
-    padding: 16px 20px;
-    gap: 16px;
-    flex-direction: column;
-    align-items: stretch;
+    height: 70px;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    justify-content: flex-start;
   }
 
   .viewToggles {
-    justify-content: center;
+    padding: 6px 3px 2px 4px;
+    margin-left: 5px;
+    margin-right: 21px;
+  }
+
+  .viewToggles button:not(:first-child) {
+    display: none;
+  }
+
+  .viewToggles button {
+    padding: 0;
+    width: 21px;
+    height: 20px;
+  }
+
+  .viewToggles button svg {
+    width: 14px;
+    height: 12px;
   }
 
   .searchInput {
-    max-width: 100%;
+    flex: 1;
+    max-width: none;
+    position: relative;
+  }
+
+  .searchInput::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 0px;
+    background: #9F9F9F;
   }
 
   .searchInput input {
-    border-left: none;
-    padding-left: 16px;
-    border-top: 1px solid #9F9F9F;
-    padding-top: 16px;
+    border: none;
+    padding: 0;
+    padding-left: 10px;
+    font-size: 11px;
+    font-weight: 400;
   }
 
-  .showControl,
+  .searchInput input::placeholder {
+    color: #000;
+  }
+
+  .showControl {
+    display: none;
+  }
+
   .sortControl {
-    justify-content: space-between;
+    margin-left: auto;
+    margin-right: 13px;
+    gap: 0;
   }
 
-  .showControl span,
   .sortControl span {
-    font-size: 16px;
+    font-size: 11px;
+    margin-right: 8px;
   }
 
-  .showControl select,
   .sortControl select {
-    font-size: 16px;
-    min-width: auto;
-    flex: 1;
+    padding: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: #fff;
+    border-radius: 7px;
+    font-size: 9px;
+    min-width: 88px;
+    height: 17px;
+    text-align: center;
   }
 
   .postsSection {
@@ -532,20 +573,36 @@
   }
 
   .featuresSection {
-    padding: 40px 20px;
+    padding: 19px 11px;
+    height: 92px;
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
   }
 
   .feature {
-    flex-direction: column;
-    text-align: center;
+    gap: 10px;
+  }
+
+  .feature svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .feature div {
+    gap: 2px;
   }
 
   .feature h3 {
-    font-size: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 150%;
   }
 
   .feature p {
-    font-size: 16px;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 150%;
   }
 }
 

@@ -2,16 +2,31 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import styles from './BlogNavbar.module.css';
 
 export default function BlogNavbar() {
   const [activeLink, setActiveLink] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const isTransparent = isMobile && pathname === '/blog-home';
 
   return (
     <>
-      <header className={styles.header}>
+      <header className={`${styles.header} ${isTransparent ? styles.headerTransparent : ''}`}>
         <div className={styles.container}>
           <Link href="/blog-home" className={styles.logo}>
             <Image 
