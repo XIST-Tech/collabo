@@ -461,7 +461,7 @@
 
 .servicesCtaButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 35px 60px 0 rgba(168, 22, 75, 0.25);
+  box-shadow: 0 35px 60px 0 D4AF37;
 }
 
 .servicesCtaButton:active {
