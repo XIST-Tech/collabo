@@ -214,7 +214,7 @@
   top: 24px;
   right: 24px;
   width: 64px;
-  height: 48px;
+  height: 64px;
   background: #E97171;
   border-radius: 50%;
   display: flex;
@@ -546,6 +546,14 @@
 
   .postImage {
     height: 200px;
+  }
+
+  .postNumber {
+    width: 48px;
+    height: 48px;
+    font-size: 14px;
+    top: 16px;
+    right: 16px;
   }
 
   .postTitle {
