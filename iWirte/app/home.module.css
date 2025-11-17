@@ -430,7 +430,7 @@
   font-family: 'Ubuntu', -apple-system, sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
-  color: #F0C94F;
+  color: #090909;
   line-height: 1.5;
 }
 
@@ -446,8 +446,8 @@
   padding: 18px 56px;
   border-radius: 192px;
   border: 2px solid rgba(255, 255, 255, 0.80);
-  background: linear-gradient(97deg, #FF698D -3.47%, #FB3F6C 108.43%);
-  box-shadow: 0 30px 50px 0 rgba(168, 22, 75, 0.15);
+  background: linear-gradient(97deg, #b05050 -3.47%, #6B2A2A 108.43%);
+  box-shadow: 0 30px 50px 0 rgba(109, 4, 22, 0.731);
   color: #FFF;
   text-align: center;
   font-family: 'Ubuntu', -apple-system, sans-serif;
