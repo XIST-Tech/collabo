@@ -213,7 +213,6 @@
   transform: translateY(-2px);
 }
 
-/* Carousel Styles */
 .carouselWrapper {
   width: 100%;
   max-width: 1196px;
@@ -399,7 +398,6 @@
   background: #B88E2F;
 }
 
-/* Responsive Styles */
 @media (max-width: 1400px) {
   .latestPostsContent {
     grid-template-columns: 1fr;
@@ -458,32 +456,95 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: 600px;
+    height: 731px;
+  }
+
+  .heroImage::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.42) 100%),
+                linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.24) 100%);
   }
 
   .heroContent {
-    padding: 0 20px;
+    padding: 0 26px;
+    justify-content: flex-start;
     align-items: flex-end;
     padding-bottom: 40px;
   }
 
   .heroCard {
     max-width: 100%;
-    padding: 40px 24px;
+    background: transparent;
+    padding: 0;
+    gap: 24px;
+  }
+
+  .heroLabel {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 0.2px;
+    text-transform: none;
   }
 
   .heroTitle {
-    font-size: 32px;
-    line-height: 42px;
+    font-size: 27px;
+    line-height: 150%;
+    color: #fff;
+    font-weight: 700;
   }
 
   .heroSubtitle {
-    font-size: 16px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color: #EEE;
   }
 
   .heroButton {
-    padding: 20px 48px;
-    font-size: 14px;
+    display: none;
+  }
+
+  .heroButtons {
+    display: flex;
+    gap: 12px;
+  }
+
+  .heroButtonPrimary,
+  .heroButtonSecondary {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-family: 'Poppins', -apple-system, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .heroButtonPrimary {
+    background: #B88E2F;
+    color: #fff;
+  }
+
+  .heroButtonPrimary:hover {
+    background: #9a7628;
+  }
+
+  .heroButtonSecondary {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid #fff;
+  }
+
+  .heroButtonSecondary:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
 
   .characteristicsSection {
@@ -554,26 +615,21 @@
 
 @media (max-width: 480px) {
   .hero {
-    height: 500px;
+    height: 731px;
   }
 
   .heroCard {
-    padding: 32px 20px;
+    padding: 0;
   }
 
   .heroTitle {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 27px;
+    line-height: 150%;
   }
 
   .heroSubtitle {
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .heroButton {
-    padding: 16px 32px;
-    font-size: 12px;
+    font-size: 11px;
+    line-height: normal;
   }
 
   .latestPostsText h2 {

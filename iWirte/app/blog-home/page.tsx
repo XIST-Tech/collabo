@@ -137,7 +137,7 @@ export default function BlogHomePage() {
             <div className={styles.heroCard}>
               <span className={styles.heroLabel}>My Blog</span>
               <h1 className={styles.heroTitle}>
-                Insights & experiences from my writing journey
+                Insights & Exper<span style={{ color: '#B88E2F' }}>iences</span> From My writing Journey
               </h1>
               <p className={styles.heroSubtitle}>
                 Pieces from my keep notes—no rules, just genuine, informal takes on life, work, and everything in between.
@@ -145,6 +145,14 @@ export default function BlogHomePage() {
               <Link href="/blog" className={styles.heroButton}>
                 READ NOW
               </Link>
+              <div className={styles.heroButtons}>
+                <Link href="/blog" className={styles.heroButtonPrimary}>
+                  Read Now
+                </Link>
+                <Link href="/blog" className={styles.heroButtonSecondary}>
+                  Explore More
+                </Link>
+              </div>
             </div>
           </div>
         </section>
