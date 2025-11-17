@@ -35,7 +35,7 @@ export default function BlogFooter() {
             src="/image.png" 
             alt="iWrite Logo" 
             width={102} 
-            height={50}
+            height={34}
             className={styles.brandLogo}
           />
           <p className={styles.brandTagline}>
