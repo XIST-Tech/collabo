@@ -573,11 +573,15 @@
     padding: 20px 0 40px;
   }
 
+  .pagination {
+    gap: 12px;
+  }
+
   .pageBtn,
   .nextBtn {
-    width: 48px;
-    height: 48px;
-    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
   }
 
   .featuresSection {
