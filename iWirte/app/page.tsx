@@ -147,7 +147,7 @@ export default function Home() {
             </div>
 
             <div className={styles.servicesContent}>
-              <span className={styles.servicesLabel}>WHY CHOOSE US</span>
+              <span className={styles.servicesLabel}>WHAT WE OFFER</span>
               <h2 className={styles.servicesTitle}>Excellence in Every Word We Write</h2>
 
               <div className={styles.servicesList}>
