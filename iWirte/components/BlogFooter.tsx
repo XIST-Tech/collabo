@@ -63,7 +63,7 @@ export default function BlogFooter() {
 
         <div className={styles.links}>
           <h4 className={styles.linksTitle}>Quick Links</h4>
-          <div>
+          <div className={styles.linksGrid}>
             <Link href="/blog-home" className={styles.link}>Home</Link>
             <Link href="/blog" className={styles.link}>Blog</Link>
           </div>
