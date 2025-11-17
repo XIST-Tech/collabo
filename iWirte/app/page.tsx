@@ -10,6 +10,20 @@ import styles from './home.module.css';
 export default function Home() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [currentGifIndex, setCurrentGifIndex] = useState(0);
+
+  const heroGifs = [
+    'https://hgtwbiyrrmkauzsicqug.supabase.co/storage/v1/object/public/pictures/gif2.gif',
+    'https://hgtwbiyrrmkauzsicqug.supabase.co/storage/v1/object/public/pictures/gif1.gif'
+  ];
+
+  useEffect(() => {
+    const gifInterval = setInterval(() => {
+      setCurrentGifIndex(prev => (prev + 1) % heroGifs.length);
+    }, 3000);
+
+    return () => clearInterval(gifInterval);
+  }, []);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
