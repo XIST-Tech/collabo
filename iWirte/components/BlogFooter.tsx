@@ -41,9 +41,7 @@ export default function BlogFooter() {
           <p className={styles.brandTagline}>
             Pieces from my keep notes—no rules, just genuine, informal takes on life, work, and everything in between.
           </p>
-          <h3 className={styles.brandName}>
-            <span className={styles.brandI}>i</span>Write
-          </h3>
+
           <div className={styles.socialIcons}>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +72,7 @@ export default function BlogFooter() {
         <div className={styles.newsletter}>
           <h4 className={styles.newsletterTitle}>Newsletter</h4>
           <p className={styles.newsletterSubtitle}>
-            Sunscribe to my newsleter so you never miss new posts and updates.
+            Subscribe to my newsleter so you never miss new posts and updates.
           </p>
           <form className={styles.subscribeForm} onSubmit={handleSubscribe}>
             <input
