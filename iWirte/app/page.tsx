@@ -77,13 +77,14 @@ export default function Home() {
           </div>
           <div className={styles.heroImage}>
             <div className={styles.imagePlaceholder}>
-              <iframe
-                src="https://giphy.com/embed/26uf6EAcWDkNkyCVa"
-                width="100%"
-                height="100%"
-                style={{ border: 'none', borderRadius: '12px' }}
-                allowFullScreen
-              />
+              {heroGifs.map((gif, index) => (
+                <img
+                  key={gif}
+                  src={gif}
+                  alt="Hero Animation"
+                  className={`${styles.heroGif} ${index === currentGifIndex ? styles.activeGif : ''}`}
+                />
+              ))}
             </div>
           </div>
         </section>
