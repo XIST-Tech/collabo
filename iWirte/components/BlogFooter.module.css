@@ -301,10 +301,8 @@
 
   .linksGrid {
     display: grid;
-    /* CHANGE: Use a single column template */
-    grid-template-columns: 1fr;
-    /* CHANGE: Reduce gap to vertical-only, or adjust as needed */
-    gap: 8px;
+    grid-template-columns: auto auto;
+    gap: 8px 20px;
   }
 
   .link {
