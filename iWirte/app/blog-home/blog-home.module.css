@@ -95,6 +95,10 @@
   box-shadow: 0 4px 12px rgba(184, 142, 47, 0.3);
 }
 
+.heroButtons {
+  display: none;
+}
+
 .characteristicsSection {
   width: 100%;
   padding: 100px 40px;
