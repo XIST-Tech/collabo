@@ -30,6 +30,20 @@ export default function BlogPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [hoveredPostId, setHoveredPostId] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [currentGifIndex, setCurrentGifIndex] = useState(0);
+
+  const heroGifs = [
+    'https://hgtwbiyrrmkauzsicqug.supabase.co/storage/v1/object/public/pictures/gif2.gif',
+    'https://hgtwbiyrrmkauzsicqug.supabase.co/storage/v1/object/public/pictures/gif1.gif'
+  ];
+
+useEffect(() => {
+    const gifInterval = setInterval(() => {
+      setCurrentGifIndex(prev => (prev + 1) % heroGifs.length);
+    }, 3000);
+
+    return () => clearInterval(gifInterval);
+  }, []);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -168,11 +182,16 @@ export default function BlogPage() {
       
       <main className={styles.blogPage}>
         <section className={styles.hero}>
-          <img 
-            src="https://api.builder.io/api/v1/image/assets/TEMP/9e49dcaf5e4e4432d24340132ccef5037868fd5b?width=2880" 
-            alt="Blog Hero"
-            className={styles.heroImage}
-          />
+          <div className={styles.heroGifContainer}>
+            {heroGifs.map((gif, index) => (
+              <img
+                key={gif}
+                src={gif}
+                alt="Blog Hero Animation"
+                className={`${styles.heroImage} ${index === currentGifIndex ? styles.activeGif : ''}`}
+              />
+            ))}
+          </div>
           <div className={styles.heroContent}>
             <h1>Blogs</h1>
             <div className={styles.breadcrumb}>
