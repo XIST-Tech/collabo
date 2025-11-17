@@ -202,9 +202,10 @@
   }
 
   .brandLogo {
-    width: 102px;
-    height: 34px;
+    width: 102px !important;
+    height: 34px !important;
     margin-bottom: 16px;
+    object-fit: contain;
   }
 
   .brandTagline {
@@ -300,9 +301,9 @@
   }
 
   .linksGrid {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 8px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .link {
