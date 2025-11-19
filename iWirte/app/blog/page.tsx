@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { createClient } from '@/lib/supabase';
 import BlogNavbar from "@/components/BlogNavbar";
 import BlogFooter from "@/components/BlogFooter";
+import BlogFooterMobile from "@/components/BlogFooterMobile";
 import styles from './blog.module.css';
 
 interface BlogPost {
@@ -393,6 +394,7 @@ useEffect(() => {
       </main>
 
       <BlogFooter />
+      <BlogFooterMobile />
     </>
   );
 }

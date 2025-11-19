@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import BlogNavbar from '@/components/BlogNavbar';
 import BlogFooter from '@/components/BlogFooter';
+import BlogFooterMobile from '@/components/BlogFooterMobile';
 import BlogReactions from '@/components/BlogReactions';
 import BlogComments from '@/components/BlogComments';
 import WelcomeModal from '@/components/WelcomeModal';
@@ -92,8 +93,9 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           </div>
         </section>
       </div>
-      
+
       <BlogFooter />
+      <BlogFooterMobile />
     </>
   );
 }
