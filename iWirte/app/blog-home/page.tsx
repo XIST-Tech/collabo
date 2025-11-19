@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { createClient } from '@/lib/supabase';
 import BlogNavbar from '@/components/BlogNavbar';
 import BlogFooter from '@/components/BlogFooter';
+import BlogFooterMobile from '@/components/BlogFooterMobile';
 import styles from './blog-home.module.css';
 
 interface BlogPost {
@@ -262,6 +263,7 @@ export default function BlogHomePage() {
       </main>
 
       <BlogFooter />
+      <BlogFooterMobile />
     </>
   );
 }
