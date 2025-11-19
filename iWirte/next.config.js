@@ -2,6 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: [
+      'cdn.builder.io',
+      'images.unsplash.com',
+      'lh3.googleusercontent.com',
+    ],
+  },
   experimental: {
     esmExternals: true,
   },
