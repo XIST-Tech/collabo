@@ -1,5 +1,4 @@
 [build]
-  base = "iWirte"
   command = "npm run build"
   functions = "netlify/functions"
   publish = ".next"
