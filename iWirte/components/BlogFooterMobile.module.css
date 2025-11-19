@@ -202,7 +202,7 @@
 }
 
 .link:last-child {
-  padding-bottom: 4;
+  padding-bottom: 4px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.17);
   padding-top: 8px;
 }
