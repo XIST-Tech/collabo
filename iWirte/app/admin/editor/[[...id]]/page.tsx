@@ -407,7 +407,6 @@ export default function EditorPage({ params }: { params: { id?: string[] } }) {
             </label>
             <div style={{ position: 'relative' }}>
               <div className="rich-text-editor border rounded-lg relative" style={{ borderColor: '#B88E2F' }}>
-                {/* @ts-expect-error - ReactQuill ref typing issue with library */}
                 <ReactQuill
                   ref={quillRef}
                   theme="snow"
