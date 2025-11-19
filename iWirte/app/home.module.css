@@ -291,6 +291,7 @@
 .whyCardsWrapper {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -315,9 +316,11 @@
 
 @media only screen and (max-width: 767px) {
   .whyCardsGrid {
-    grid-template-columns: repeat(3, 100%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0;
     width: 300%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
