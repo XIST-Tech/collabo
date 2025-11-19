@@ -133,7 +133,7 @@ export default function Home() {
             </div>
 
             <div className={styles.whyCardsWrapper}>
-              <div className={styles.whyCardsGrid} style={{ transform: `translateX(-${currentCardIndex * 100}%)` }}>
+              <div className={styles.whyCardsGrid} style={{ transform: `translateX(-${(currentCardIndex / 3) * 100}%)` }}>
                 <div className={styles.whyCard}>
                   <svg className={styles.cardIcon} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path opacity="0.4" d="M31.6667 17.1334V29.05C31.6167 33.8 30.3166 35 25.3666 35H9.63339C4.60005 35 3.33334 33.75 3.33334 28.7834V17.1334C3.33334 12.6334 4.38334 11.1834 8.33334 10.95C8.73334 10.9334 9.16672 10.9167 9.63339 10.9167H25.3666C30.4 10.9167 31.6667 12.1667 31.6667 17.1334Z" fill="#682937"/>
