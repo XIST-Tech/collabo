@@ -79,13 +79,11 @@ export default function Home() {
           <div className={styles.heroImage}>
             <div className={styles.imagePlaceholder}>
               {heroGifs.map((gif, index) => (
-                <Image
+                <img
                   key={gif}
                   src={gif}
                   alt="Hero Animation"
-                  fill
                   className={`${styles.heroGif} ${index === currentGifIndex ? styles.activeGif : ''}`}
-                  style={{ objectFit: 'contain' }}
                 />
               ))}
             </div>
