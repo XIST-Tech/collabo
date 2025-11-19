@@ -29,8 +29,8 @@
 }
 
 .logo {
-  width: 204px !important;
-  height: 136px !important;
+  width: 180px !important;
+  height: 96px !important;
   object-fit: contain;
   object-position: left center;
   margin-bottom: 10px;
