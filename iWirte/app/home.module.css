@@ -393,8 +393,9 @@
 .carouselControls {
   display: none;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
   margin-top: 32px;
+  padding: 0 16px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -404,24 +405,28 @@
 }
 
 .carouselDot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   border: none;
-  background: #D1D5DB;
+  background: #D4AF37;
+  opacity: 0.4;
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
+  flex-shrink: 0;
 }
 
 .carouselDot:hover {
-  background: #9CA3AF;
+  background: #D4AF37;
+  opacity: 0.7;
 }
 
 .carouselDot.activeDot {
-  background: var(--maroon);
-  width: 28px;
-  border-radius: 5px;
+  background: #682937;
+  width: 32px;
+  border-radius: 6px;
+  opacity: 1;
 }
 
 /* Services Section - Figma Design */
