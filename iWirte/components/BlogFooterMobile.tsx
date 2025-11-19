@@ -95,7 +95,7 @@ export default function BlogFooterMobile() {
         </div>
 
         <div className={styles.copyright}>
-          <p>2023 furino. All rights reverved</p>
+          <p>&copy; 2025 furino. All rights reverved</p>
         </div>
       </div>
     </footer>

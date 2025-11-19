@@ -25,18 +25,21 @@
   order: 1;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .logo {
-  width: 102px !important;
-  height: 34px !important;
+  width: 408px !important;
+  height: 136px !important;
   object-fit: contain;
+  object-position: left center;
+  margin: -34px 0 -34px -146px;
   margin-bottom: 16px;
 }
 
 .tagline {
   font-family: 'Poppins', -apple-system, sans-serif;
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.2px;
@@ -50,11 +53,12 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  margin-top: -8px;
 }
 
 .newsletterTitle {
   font-family: 'Poppins', -apple-system, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   line-height: normal;
   color: #000;
@@ -63,7 +67,7 @@
 
 .newsletterSubtitle {
   font-family: 'Poppins', -apple-system, sans-serif;
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.2px;
@@ -105,7 +109,7 @@
 }
 
 .subscribeBtn {
-  padding: 4px 12px;
+  padding: 0 12px;
   background: #000;
   color: #fff;
   border: none;
@@ -114,6 +118,10 @@
   font-size: 10px;
   font-weight: 700;
   line-height: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -121,7 +129,6 @@
   right: 8px;
   top: 50%;
   transform: translateY(-50%);
-  height: 24px;
 }
 
 .subscribeBtn:hover:not(:disabled) {
@@ -137,7 +144,7 @@
   order: 3;
   display: flex;
   gap: 10px;
-  margin-top: 64px;
+  margin-top: 32px;
 }
 
 .socialSection a {
@@ -175,7 +182,9 @@
 
 .linksGrid {
   display: flex;
-  gap: 45px;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
 }
 
 .link {
@@ -186,6 +195,14 @@
   color: #000;
   text-decoration: none;
   transition: color 0.3s ease;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+  width: 100%;
+}
+
+.link:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .link:hover {
@@ -199,7 +216,7 @@
 
 .copyright p {
   font-family: 'Poppins', -apple-system, sans-serif;
-  font-size: 8px;
+  font-size: 10.4px;
   font-weight: 400;
   line-height: normal;
   color: #000;
