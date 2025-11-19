@@ -159,7 +159,7 @@ export default function EditorPage({ params }: { params: { id?: string[] } }) {
   };
 
   const handleEmojiClick = (emojiObject: any) => {
-    const editor = quillRef.current?.getEditor();
+    const editor = getQuillEditor();
     if (editor) {
       const selection = editor.getSelection();
       if (selection) {
