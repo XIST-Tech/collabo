@@ -1,0 +1,207 @@
+.footer {
+  display: none;
+  width: 100%;
+  background: #FFF;
+  border-top: 1px solid rgba(0, 0, 0, 0.17);
+  padding: 18px 0 16px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    display: block;
+  }
+}
+
+.container {
+  max-width: 393px;
+  margin: 0 auto;
+  padding: 0 29px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logoSection {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 102px !important;
+  height: 34px !important;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.tagline {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #9F9F9F;
+  margin: 0 0 16px 0;
+  max-width: 238px;
+}
+
+.newsletterSection {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.newsletterTitle {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: normal;
+  color: #000;
+  margin: 0 0 4px 0;
+}
+
+.newsletterSubtitle {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #9F9F9F;
+  margin: 0 0 12px 0;
+  max-width: 238px;
+}
+
+.subscribeForm {
+  display: flex;
+  align-items: center;
+  background: #F9F1E7;
+  border-radius: 60px;
+  padding: 0;
+  height: 41px;
+  position: relative;
+  max-width: 320px;
+}
+
+.emailInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 12px 12px 20px;
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #000;
+  outline: none;
+}
+
+.emailInput::placeholder {
+  color: #9EA3B5;
+}
+
+.emailInput:disabled {
+  opacity: 0.6;
+}
+
+.subscribeBtn {
+  padding: 4px 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 60px;
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 24px;
+}
+
+.subscribeBtn:hover:not(:disabled) {
+  background: #333;
+}
+
+.subscribeBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.socialSection {
+  order: 3;
+  display: flex;
+  gap: 10px;
+  margin-top: 64px;
+}
+
+.socialSection a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.socialSection a:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.socialSection svg {
+  width: auto;
+  height: auto;
+}
+
+.linksSection {
+  order: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linksTitle {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  color: #9F9F9F;
+  margin: 0 0 12px 0;
+}
+
+.linksGrid {
+  display: flex;
+  gap: 45px;
+}
+
+.link {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: normal;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #B88E2F;
+}
+
+.copyright {
+  order: 5;
+  margin-top: 14px;
+}
+
+.copyright p {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+  margin: 0;
+}
