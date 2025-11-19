@@ -1,21 +1,13 @@
 'use client';
 
-import { useState, useEffect, useRef, forwardRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import EmojiPicker from 'emoji-picker-react';
 import ImageEditorModal from '@/components/ImageEditorModal';
 import 'react-quill/dist/quill.snow.css';
 
-const ReactQuill = dynamic(
-  async () => {
-    const { default: QuillComponent } = await import('react-quill');
-    return forwardRef((props: any, ref: any) => (
-      <QuillComponent {...props} forwardedRef={ref} />
-    ));
-  },
-  { ssr: false }
-);
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false }) as any;
 
 export default function EditorPage({ params }: { params: { id?: string[] } }) {
   const router = useRouter();
