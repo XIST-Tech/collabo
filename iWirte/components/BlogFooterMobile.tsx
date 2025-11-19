@@ -31,10 +31,10 @@ export default function BlogFooterMobile() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.logoSection}>
-          <Image 
-            src="/image.png" 
-            alt="iWrite Logo" 
-            width={102} 
+          <Image
+            src="https://cdn.builder.io/api/v1/image/assets%2Fb59f10e77e2246aa8d90fe3808901b3a%2F3cfc47edb6194c268e645362066c301c?format=webp&width=800"
+            alt="iWrite Logo"
+            width={102}
             height={34}
             className={styles.logo}
           />

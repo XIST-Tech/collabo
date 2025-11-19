@@ -195,14 +195,17 @@
   color: #000;
   text-decoration: none;
   transition: color 0.3s ease;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
   width: 100%;
 }
 
+.link:first-child {
+  margin-bottom: 8px;
+}
+
 .link:last-child {
-  border-bottom: none;
   padding-bottom: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+  padding-top: 8px;
 }
 
 .link:hover {
