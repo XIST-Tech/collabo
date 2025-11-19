@@ -176,7 +176,7 @@ export default function EditorPage({ params }: { params: { id?: string[] } }) {
 
   // Setup editor with emoji detection and double-tap image handling
   useEffect(() => {
-    const editor = quillRef.current?.getEditor();
+    const editor = getQuillEditor();
     if (!editor) return;
 
     // Detect '::' for emoji picker
