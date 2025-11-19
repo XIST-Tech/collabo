@@ -407,9 +407,8 @@ export default function EditorPage({ params }: { params: { id?: string[] } }) {
             </label>
             <div style={{ position: 'relative' }}>
               <div className="rich-text-editor border rounded-lg relative" style={{ borderColor: '#B88E2F' }}>
-                {/* @ts-ignore - ReactQuill ref support */}
                 <ReactQuill
-                  ref={quillRef}
+                  ref={quillRef as any}
                   theme="snow"
                   value={content}
                   onChange={setContent}

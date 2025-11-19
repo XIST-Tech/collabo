@@ -79,11 +79,13 @@ export default function Home() {
           <div className={styles.heroImage}>
             <div className={styles.imagePlaceholder}>
               {heroGifs.map((gif, index) => (
-                <img
+                <Image
                   key={gif}
                   src={gif}
                   alt="Hero Animation"
+                  fill
                   className={`${styles.heroGif} ${index === currentGifIndex ? styles.activeGif : ''}`}
+                  style={{ objectFit: 'contain' }}
                 />
               ))}
             </div>
@@ -174,10 +176,12 @@ export default function Home() {
                   <path d="M0,100 L100,0 L200,100 L100,200 Z" fill="#FF698D" opacity="0.4"/>
                 </svg>
                 <div className={styles.serviceImageWrapper}>
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop"
                     alt="Writing Services"
+                    fill
                     className={styles.serviceImage}
+                    style={{ objectFit: 'cover' }}
                   />
                   <div className={styles.imageOverlay}>
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
