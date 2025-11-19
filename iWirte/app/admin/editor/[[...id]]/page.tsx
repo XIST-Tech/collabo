@@ -25,6 +25,15 @@ export default function EditorPage({ params }: { params: { id?: string[] } }) {
   const [imageEditorOpen, setImageEditorOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<HTMLImageElement | null>(null);
   const quillRef = useRef<any>(null);
+
+  // Type assertion helper for ReactQuill ref to avoid TypeScript errors
+  const getQuillEditor = () => {
+    try {
+      return (quillRef.current as any)?.getEditor?.();
+    } catch {
+      return null;
+    }
+  };
   const emojiPickerRef = useRef<HTMLDivElement>(null);
   const lastTapTime = useRef(0);
 
