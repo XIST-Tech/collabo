@@ -35,23 +35,27 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const checkMobileAndSetInterval = () => {
-      if (window.innerWidth <= 767) {
-        const cardInterval = setInterval(() => {
+    let interval: NodeJS.Timeout | null = null;
+
+    const startCarousel = () => {
+      if (typeof window !== 'undefined' && window.innerWidth <= 767) {
+        interval = setInterval(() => {
           setCurrentCardIndex(prev => (prev + 1) % 3);
         }, 3000);
-        return cardInterval;
       }
-      return null;
     };
 
-    const interval = checkMobileAndSetInterval();
     const handleResize = () => {
-      if (interval) clearInterval(interval);
-      const newInterval = checkMobileAndSetInterval();
+      if (interval) {
+        clearInterval(interval);
+        interval = null;
+      }
+      startCarousel();
     };
 
+    startCarousel();
     window.addEventListener('resize', handleResize);
+
     return () => {
       if (interval) clearInterval(interval);
       window.removeEventListener('resize', handleResize);
