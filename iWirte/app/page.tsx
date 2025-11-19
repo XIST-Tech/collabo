@@ -11,6 +11,7 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
   const heroGifs = [
     'https://hgtwbiyrrmkauzsicqug.supabase.co/storage/v1/object/public/pictures/gif2.gif',
