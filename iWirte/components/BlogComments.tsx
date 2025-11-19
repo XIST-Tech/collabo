@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { format } from 'date-fns';
 
 type Comment = {
@@ -21,11 +21,7 @@ export default function BlogComments({ blogId }: { blogId: string }) {
   const [replyContent, setReplyContent] = useState('');
   const [replyAuthorName, setReplyAuthorName] = useState('');
 
-  useEffect(() => {
-    fetchComments();
-  }, [blogId]);
-
-  const fetchComments = async () => {
+  const fetchComments = useCallback(async () => {
     try {
       const response = await fetch(`/api/blog/comments?blogId=${blogId}`);
       if (response.ok) {
@@ -37,7 +33,11 @@ export default function BlogComments({ blogId }: { blogId: string }) {
     } catch (error) {
       console.error('Failed to fetch comments:', error);
     }
-  };
+  }, [blogId]);
+
+  useEffect(() => {
+    fetchComments();
+  }, [fetchComments]);
 
   const organizeComments = (allComments: Comment[]): Comment[] => {
     const commentMap = new Map<string, Comment>();
