@@ -84,11 +84,7 @@ useEffect(() => {
     fetchPosts();
   }, []);
 
-  useEffect(() => {
-    filterPosts();
-  }, [searchQuery, timeFilter, posts]);
-
-  const filterPosts = () => {
+  const filterPosts = useCallback(() => {
     let filtered = [...posts];
 
     if (searchQuery) {
@@ -118,7 +114,11 @@ useEffect(() => {
 
     setFilteredPosts(filtered);
     setCurrentPage(1);
-  };
+  }, [posts, searchQuery, timeFilter]);
+
+  useEffect(() => {
+    filterPosts();
+  }, [filterPosts]);
 
   const totalPages = Math.ceil(filteredPosts.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
