@@ -34,6 +34,30 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    const checkMobileAndSetInterval = () => {
+      if (window.innerWidth <= 767) {
+        const cardInterval = setInterval(() => {
+          setCurrentCardIndex(prev => (prev + 1) % 3);
+        }, 3000);
+        return cardInterval;
+      }
+      return null;
+    };
+
+    const interval = checkMobileAndSetInterval();
+    const handleResize = () => {
+      if (interval) clearInterval(interval);
+      const newInterval = checkMobileAndSetInterval();
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      if (interval) clearInterval(interval);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const handleNewsletterSignup = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
