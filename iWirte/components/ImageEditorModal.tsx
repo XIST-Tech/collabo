@@ -58,7 +58,12 @@ export default function ImageEditorModal({
 
         <div className={styles.content}>
           <div className={styles.preview}>
-            <img src={imageSrc} alt="Preview" />
+            <Image
+              src={imageSrc}
+              alt="Preview"
+              fill
+              style={{ objectFit: 'contain' }}
+            />
           </div>
 
           <div className={styles.tabs}>
