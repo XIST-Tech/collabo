@@ -3,10 +3,19 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [
-      'cdn.builder.io',
-      'images.unsplash.com',
-      'lh3.googleusercontent.com',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.builder.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
     ],
   },
   experimental: {
