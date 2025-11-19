@@ -186,65 +186,225 @@
   }
 }
 
-/* Why Section */
+/* Why Section - Figma Design */
 .whySection {
   background: white;
-  padding: var(--spacer-07) 0;
-  border-top: 1px solid var(--border);
+  padding: 80px 0;
+  position: relative;
 }
 
 @media only screen and (min-width: 1024px) {
   .whySection {
-    padding: var(--spacer-08) 0;
+    padding: 100px 0;
   }
 }
 
-.whyGrid {
+.whyContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 72px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 32px;
-  margin-bottom: 40px;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 1023px) {
+  .whyContainer {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 0 40px;
+  }
 }
 
 @media only screen and (max-width: 599px) {
-  .whyGrid {
-    grid-template-columns: 1fr;
+  .whyContainer {
+    padding: 0 24px;
+    gap: 40px;
+  }
+}
+
+.whyLeftContent {
+  position: relative;
+  padding-top: 30px;
+}
+
+.whyLabel {
+  font-family: 'Ubuntu', -apple-system, sans-serif;
+  color: var(--gold);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.whyTitle {
+  font-family: 'Ubuntu', -apple-system, sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.47;
+  font-weight: 700;
+  color: #282C4B;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.02em;
+}
+
+@media only screen and (max-width: 599px) {
+  .whyTitle {
+    font-size: 1.875rem;
+  }
+}
+
+.whyDescription {
+  font-family: 'Ubuntu', -apple-system, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #747582;
+  margin: 0;
+  max-width: 335px;
+}
+
+@media only screen and (max-width: 599px) {
+  .whyDescription {
+    font-size: 1.125rem;
+  }
+}
+
+.decorativeArrow {
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  opacity: 0.2;
+  width: 74px;
+  height: 150px;
+  fill: var(--maroon);
+}
+
+@media only screen and (max-width: 1023px) {
+  .decorativeArrow {
+    display: none;
+  }
+}
+
+.whyCardsWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  .whyCardsWrapper {
+    overflow: visible;
+  }
+}
+
+.whyCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  transition: transform 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 1023px) {
+  .whyCardsGrid {
     gap: 24px;
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .whyCardsGrid {
+    grid-template-columns: repeat(3, 100%);
+    gap: 0;
+  }
+}
+
 .whyCard {
-  padding: 32px 24px;
   background: white;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  text-align: center;
+  padding: 32px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(121, 121, 121, 0.05);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 287px;
 }
 
-.whyCard:hover {
-  border-color: var(--maroon);
-  box-shadow: 0 4px 12px rgba(139, 58, 58, 0.1);
-  transform: translateY(-4px);
+@media only screen and (min-width: 768px) {
+  .whyCard {
+    background: var(--light-blue);
+  }
+  
+  .whyCard:hover {
+    background: #99B7C3;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(121, 121, 121, 0.15);
+  }
 }
 
-.whyIcon {
-  font-size: 32px;
-  color: var(--maroon);
-  margin-bottom: 16px;
+@media only screen and (max-width: 767px) {
+  .whyCard {
+    border: 1px solid var(--border);
+  }
 }
 
-.whyCard h3 {
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-family: 'Ubuntu', -apple-system, sans-serif;
   font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--dark-text);
-  margin-bottom: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #14183E;
+  margin: 0;
 }
 
-.whyCard p {
-  font-size: 0.975rem;
-  color: var(--light-text);
-  line-height: 1.6;
+.cardDescription {
+  font-family: 'Ubuntu', -apple-system, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #747582;
+  margin: 0;
+}
+
+.carouselControls {
+  display: none;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+@media only screen and (max-width: 767px) {
+  .carouselControls {
+    display: flex;
+  }
+}
+
+.carouselDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #D1D5DB;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carouselDot:hover {
+  background: #9CA3AF;
+}
+
+.carouselDot.activeDot {
+  background: var(--maroon);
+  width: 28px;
+  border-radius: 5px;
 }
 
 /* Services Section - Figma Design */
@@ -461,7 +621,7 @@
 
 .servicesCtaButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 35px 60px 0 D4AF37;
+  box-shadow: 0 35px 60px 0 rgba(212, 175, 55, 0.3);
 }
 
 .servicesCtaButton:active {
