@@ -236,6 +236,12 @@
   padding-top: 30px;
 }
 
+@media only screen and (max-width: 767px) {
+  .whyLeftContent {
+    order: -1;
+  }
+}
+
 .whyLabel {
   font-family: 'Ubuntu', -apple-system, sans-serif;
   color: var(--gold);
