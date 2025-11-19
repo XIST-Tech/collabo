@@ -217,10 +217,17 @@
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .whyContainer {
+    padding: 0 20px;
+    gap: 30px;
+  }
+}
+
 @media only screen and (max-width: 599px) {
   .whyContainer {
-    padding: 0 24px;
-    gap: 40px;
+    padding: 0 16px;
+    gap: 24px;
   }
 }
 
