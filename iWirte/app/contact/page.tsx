@@ -1,25 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import styles from './contact.module.css';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    service: '',
-    message: '',
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setFormData({ name: '', email: '', service: '', message: '' });
-  };
+  const whatsappNumber = '08113301521';
+  const gmailAddress = 'iwrite79@gmail.com';
+  const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}`;
+  const gmailUrl = `mailto:${gmailAddress}`;
 
   return (
     <>
@@ -27,108 +17,182 @@ export default function ContactPage() {
       <main>
         <section className={styles.header}>
           <div className={styles.container}>
-            <h1 className={styles.headerTitle}>Get In Touch</h1>
+            <h1 className={styles.headerTitle}>Get In Touch & Join Us</h1>
             <p className={styles.headerSubtitle}>
-              Ready to start your project? We'd love to hear from you. Reach out and let's create something amazing together.
+              Ready to start your project or join our team? We'd love to hear from you. Reach out and let's create something amazing together.
             </p>
           </div>
         </section>
 
-        <section>
+        <section className={styles.heroSection}>
           <div className={styles.container}>
-            <div className={styles.infoGrid}>
-              <div className={styles.infoCard}>
-                <div className={styles.infoIcon} style={{ background: 'linear-gradient(135deg, #A8D8EA 0%, #87CEEB 100%)' }}>
-                  ✉
-                </div>
-                <h3>Email</h3>
-                <p>hello@iwrite.com</p>
+            <div className={styles.heroContent}>
+              <div className={styles.heroImage}>
+                <Image
+                  src="https://cdn.builder.io/api/v1/image/assets%2F934f466d54e44638814059cefea847fc%2Fc309cef5cffd4488aa76005017891376?format=webp&width=800"
+                  alt="Creative Writing and Learning"
+                  width={600}
+                  height={500}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
               </div>
-
-              <div className={styles.infoCard}>
-                <div className={styles.infoIcon} style={{ background: 'linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)' }}>
-                  ⏱
-                </div>
-                <h3>Response Time</h3>
-                <p>Within 24 hours</p>
-              </div>
-
-              <div className={styles.infoCard}>
-                <div className={styles.infoIcon} style={{ background: 'linear-gradient(135deg, #8B3A3A 0%, #A0002F 100%)' }}>
-                  ✓
-                </div>
-                <h3>Support</h3>
-                <p>Mon-Fri, 9AM-6PM</p>
+              <div className={styles.heroText}>
+                <h2>Connect With iWrite</h2>
+                <p>Whether you're looking for professional writing services or interested in joining our talented team of writers, we're here to help. Reach out through any of our channels below.</p>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div className={styles.formSection}>
-              {submitted && (
-                <div className={styles.successMessage}>
-                  ✓ Thank you! We'll get back to you soon.
-                </div>
-              )}
-
-              <h2 className={styles.formTitle}>Send us your project details</h2>
-
-              <form onSubmit={handleSubmit}>
-                <div className={styles.formGrid}>
-                  <div className={styles.formGroup}>
-                    <label className={styles.label}>Your Name</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className={styles.input}
+        <section className={styles.socialSection}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionTitle}>Contact Us</h2>
+            <p className={styles.sectionSubtitle}>Get in touch with us through WhatsApp or Email</p>
+            
+            <div className={styles.socialGrid}>
+              <a 
+                href={whatsappUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.socialCard}
+              >
+                <div className={styles.socialCardContent}>
+                  <div className={styles.socialImageWrapper}>
+                    <Image
+                      src="https://cdn.builder.io/api/v1/image/assets%2F934f466d54e44638814059cefea847fc%2Fee27f4120d614265bed8b04677b873c9?format=webp&width=400"
+                      alt="WhatsApp"
+                      width={150}
+                      height={150}
+                      className={styles.socialImage}
                     />
                   </div>
-
-                  <div className={styles.formGroup}>
-                    <label className={styles.label}>Email Address</label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className={styles.input}
-                    />
+                  <div className={styles.socialInfo}>
+                    <h3>WhatsApp</h3>
+                    <p>{whatsappNumber}</p>
+                    <span className={styles.contactText}>Message us on WhatsApp</span>
                   </div>
                 </div>
+              </a>
 
-                <div className={styles.formGroup}>
-                  <label className={styles.label}>Service Interested In</label>
-                  <select
-                    required
-                    value={formData.service}
-                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className={styles.select}
-                  >
-                    <option value="">Select a service</option>
-                    <option value="thesis">Thesis & Dissertation</option>
-                    <option value="project">Project Work</option>
-                    <option value="copywriting">Copywriting</option>
-                    <option value="synopsis">Synopsis Writing</option>
-                    <option value="fiction">Fiction Writing</option>
-                    <option value="other">Other</option>
-                  </select>
+              <a 
+                href={gmailUrl}
+                className={styles.socialCard}
+              >
+                <div className={styles.socialCardContent}>
+                  <div className={styles.socialImageWrapper}>
+                    <Image
+                      src="https://cdn.builder.io/api/v1/image/assets%2F934f466d54e44638814059cefea847fc%2F60ffa65659f64452ba58165cd8c44dac?format=webp&width=400"
+                      alt="Email"
+                      width={150}
+                      height={150}
+                      className={styles.socialImage}
+                    />
+                  </div>
+                  <div className={styles.socialInfo}>
+                    <h3>Email</h3>
+                    <p>{gmailAddress}</p>
+                    <span className={styles.contactText}>Send us an email</span>
+                  </div>
                 </div>
+              </a>
+            </div>
+          </div>
+        </section>
 
-                <div className={styles.formGroup}>
-                  <label className={styles.label}>Project Details</label>
-                  <textarea
-                    required
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className={styles.textarea}
-                    placeholder="Tell us about your project..."
-                  />
+        <section className={styles.joinSection}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionTitle}>Why Join iWrite?</h2>
+            
+            <div className={styles.benefitsGrid}>
+              <div className={styles.benefitCard}>
+                <div className={styles.benefitIcon}>📚</div>
+                <h3>Grow Your Skills</h3>
+                <p>Work on diverse writing projects and continuously improve your craft with a supportive community.</p>
+              </div>
+
+              <div className={styles.benefitCard}>
+                <div className={styles.benefitIcon}>💰</div>
+                <h3>Competitive Rates</h3>
+                <p>We offer competitive compensation for our talented writers across all expertise areas.</p>
+              </div>
+
+              <div className={styles.benefitCard}>
+                <div className={styles.benefitIcon}>⏰</div>
+                <h3>Flexible Schedule</h3>
+                <p>Work on your own terms with flexible deadlines and project selection that fits your lifestyle.</p>
+              </div>
+
+              <div className={styles.benefitCard}>
+                <div className={styles.benefitIcon}>🤝</div>
+                <h3>Community</h3>
+                <p>Join a network of passionate writers, collaborate on projects, and grow together.</p>
+              </div>
+
+              <div className={styles.benefitCard}>
+                <div className={styles.benefitIcon}>🎯</div>
+                <h3>Career Growth</h3>
+                <p>Build your portfolio, gain experience, and develop your professional writing career with us.</p>
+              </div>
+
+              <div className={styles.benefitCard}>
+                <div className={styles.benefitIcon}>⭐</div>
+                <h3>Recognition</h3>
+                <p>Get recognized for your outstanding work and grow your reputation in the writing industry.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.lookingForSection}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionTitle}>What We're Looking For</h2>
+            <div className={styles.lookingForGrid}>
+              <div className={styles.lookingForCard}>
+                <div className={styles.lookingForIcon}>📚</div>
+                <div className={styles.lookingForContent}>
+                  <h3>Academic Writers</h3>
+                  <p>Experience with thesis, dissertations, and research papers</p>
                 </div>
+              </div>
 
-                <button type="submit" className={styles.submitButton}>
-                  Send Message
-                </button>
-              </form>
+              <div className={styles.lookingForCard}>
+                <div className={styles.lookingForIcon}>✍</div>
+                <div className={styles.lookingForContent}>
+                  <h3>Copywriters</h3>
+                  <p>Skilled in marketing copy, web content, and brand messaging</p>
+                </div>
+              </div>
+
+              <div className={styles.lookingForCard}>
+                <div className={styles.lookingForIcon}>📖</div>
+                <div className={styles.lookingForContent}>
+                  <h3>Fiction Writers</h3>
+                  <p>Creative storytellers with published work or strong portfolios</p>
+                </div>
+              </div>
+
+              <div className={styles.lookingForCard}>
+                <div className={styles.lookingForIcon}>⚡</div>
+                <div className={styles.lookingForContent}>
+                  <h3>Technical Writers</h3>
+                  <p>Ability to simplify complex topics and create clear documentation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.statusSection}>
+          <div className={styles.container}>
+            <h3 className={styles.statusTitle}>Current Status</h3>
+            <div className={styles.statusContent}>
+              <p>
+                While we don't have open positions at the moment, we're always interested in connecting with talented writers.
+                Submit your information through WhatsApp or Email above, and we'll reach out when opportunities arise.
+              </p>
+              <p>
+                We're a growing startup of passionate writers, and we're building something special. Join us on this journey!
+              </p>
             </div>
           </div>
         </section>
