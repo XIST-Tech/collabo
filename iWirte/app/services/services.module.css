@@ -186,10 +186,11 @@
 }
 
 .featureIcon {
-  color: var(--maroon);
+  color: #99B7C3;
   margin-top: 2px;
   flex-shrink: 0;
   font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .featureItem span {
