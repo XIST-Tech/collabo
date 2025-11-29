@@ -21,10 +21,9 @@ export default function Navbar() {
   return (
     <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
-        <div className={styles.logo}>
-          <Image src="/image.png" alt="iWrite" width={32} height={32} priority />
-          <span>iWrite</span>
-        </div>
+        <Link href="/" className={styles.logo}>
+          <Image src="/image.png" alt="iWrite" width={50} height={50} priority className={styles.logoImage} />
+        </Link>
 
         {isMobileMenuOpen && (
           <div
@@ -51,7 +50,7 @@ export default function Navbar() {
           <Link href="/contact" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>
             Contact
           </Link>
-          <Link href="/careers" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="/contact" className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>
             Join Us
           </Link>
         </nav>
