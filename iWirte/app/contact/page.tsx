@@ -17,7 +17,7 @@ export default function ContactPage() {
       <main>
         <section className={styles.header}>
           <div className={styles.container}>
-            <h1 className={styles.headerTitle}>Get In Touch & Join Us</h1>
+            <h1 className={styles.headerTitle}>Get In Touch</h1>
             <p className={styles.headerSubtitle}>
               Ready to start your project or join our team? We'd love to hear from you. Reach out and let's create something amazing together.
             </p>
@@ -99,49 +99,6 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className={styles.joinSection}>
-          <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Why Join iWrite?</h2>
-            
-            <div className={styles.benefitsGrid}>
-              <div className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>📚</div>
-                <h3>Grow Your Skills</h3>
-                <p>Work on diverse writing projects and continuously improve your craft with a supportive community.</p>
-              </div>
-
-              <div className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>💰</div>
-                <h3>Competitive Rates</h3>
-                <p>We offer competitive compensation for our talented writers across all expertise areas.</p>
-              </div>
-
-              <div className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>⏰</div>
-                <h3>Flexible Schedule</h3>
-                <p>Work on your own terms with flexible deadlines and project selection that fits your lifestyle.</p>
-              </div>
-
-              <div className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>🤝</div>
-                <h3>Community</h3>
-                <p>Join a network of passionate writers, collaborate on projects, and grow together.</p>
-              </div>
-
-              <div className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>🎯</div>
-                <h3>Career Growth</h3>
-                <p>Build your portfolio, gain experience, and develop your professional writing career with us.</p>
-              </div>
-
-              <div className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>⭐</div>
-                <h3>Recognition</h3>
-                <p>Get recognized for your outstanding work and grow your reputation in the writing industry.</p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <section className={styles.lookingForSection}>
           <div className={styles.container}>
