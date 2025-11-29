@@ -13,21 +13,21 @@ export default function ServicesPage() {
       title: 'Thesis & Dissertation Writing',
       description: 'Comprehensive research and writing support for your academic journey. We help you craft well-structured, thoroughly researched theses that meet academic standards. Our writers have expertise in various fields and understand the intricacies of academic writing.',
       features: ['In-depth Research', 'Proper Citations', 'Multiple Revisions', 'Plagiarism-Free', 'Expert Writers', 'Timely Delivery'],
-      image: 'https://picsum.photos/800/600?random=10',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F934f466d54e44638814059cefea847fc%2Fa589cf02c3164dc18b7325df881ed0f6?format=webp&width=800',
     },
     {
       id: 'projects',
       title: 'Project Work & Reports',
       description: 'Professional project documentation and reports that showcase your work effectively. From technical reports to business proposals, we bring clarity and professionalism to your work. Each project is customized to meet your specific requirements and academic or professional standards.',
       features: ['Clear Structure', 'Data Analysis', 'Professional Formatting', 'Executive Summaries', 'Custom Solutions', 'Quality Assurance'],
-      image: 'https://picsum.photos/800/600?random=11',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F934f466d54e44638814059cefea847fc%2F15a2d0ed3b4a41ac807248f3a517a53a?format=webp&width=800',
     },
     {
       id: 'copywriting',
       title: 'Professional Copywriting',
       description: "Compelling copy that drives action. Whether it's web content, marketing materials, or brand messaging, we make your words work. We understand the power of persuasive writing and craft messages that resonate with your target audience while maintaining authenticity.",
       features: ['SEO Optimized', 'Brand Voice', 'Conversion Focused', 'Engaging Content', 'Marketing Expertise', 'Results-Driven'],
-      image: 'https://picsum.photos/800/600?random=12',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F934f466d54e44638814059cefea847fc%2Fd43245026ab3481bbe5317586ac15761?format=webp&width=800',
     },
     {
       id: 'synopsis',
@@ -41,7 +41,7 @@ export default function ServicesPage() {
       title: 'Fiction & Creative Writing',
       description: 'Stories that transport readers to new worlds. Our creative writers craft compelling narratives with memorable characters, engaging plots, and vivid imagery. Whether you need a short story, novel, or serialized content, we bring your creative vision to life with professionalism and artistry.',
       features: ['Original Stories', 'Character Development', 'Plot Structure', 'Genre Expertise', 'Creative Direction', 'Editing Support'],
-      image: 'https://picsum.photos/800/600?random=14',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F934f466d54e44638814059cefea847fc%2Fedc088a14f2d4d139bc7d5c2b3701654?format=webp&width=800',
     },
   ];
 
