@@ -45,11 +45,14 @@
   font-size: 18px;
   color: var(--maroon);
   font-family: "Google Sans", arial, sans-serif;
+  text-decoration: none;
 }
 
-.logo img {
-  width: 32px;
-  height: 32px;
+.logoImage {
+  border-radius: 200px;
+  border: 3px solid #000;
+  width: 50px;
+  height: 50px;
 }
 
 .nav {
