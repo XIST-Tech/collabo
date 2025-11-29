@@ -371,10 +371,15 @@
   height: 40px;
   color: var(--maroon);
   flex-shrink: 0;
-  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.lookingForIcon svg {
+  width: 32px;
+  height: 32px;
+  color: inherit;
 }
 
 .lookingForContent h3 {
