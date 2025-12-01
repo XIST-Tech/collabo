@@ -112,6 +112,7 @@
 .heroImage {
   position: relative;
   aspect-ratio: 16 / 9;
+  max-width: 650px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(153, 183, 195, 0.2);
@@ -119,7 +120,15 @@
 
 @media only screen and (max-width: 1023px) {
   .heroImage {
-    height: 300px;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .heroImage {
+    aspect-ratio: 16 / 10;
+    max-width: 100%;
   }
 }
 

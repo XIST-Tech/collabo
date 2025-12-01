@@ -209,7 +209,13 @@
 
 @media only screen and (max-width: 1023px) {
   .serviceImage {
-    height: 300px;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .serviceImage {
+    aspect-ratio: 3 / 2;
   }
 }
 
