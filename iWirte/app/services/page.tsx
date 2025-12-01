@@ -34,7 +34,7 @@ export default function ServicesPage() {
       title: 'Synopsis Writing',
       description: 'Concise, engaging summaries that capture the essence of your content. Perfect for books, research papers, or business documents. We distill complex information into clear, compelling synopses that engage readers and highlight key points without overwhelming them.',
       features: ['Key Points Highlighted', 'Clear & Concise', 'Engaging Format', 'Quick Turnaround', 'Professional Polish', 'Flexible Length'],
-      image: 'https://images.unsplash.com/photo-1507842072343-583f20270319?w=800&h=600&fit=crop',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2F9b5ec247a0a44601a1e9c096ad90bf36%2F0ebb0ca7cbf3478688c67d5f26e88dd3?format=webp&width=800',
     },
     {
       id: 'fiction',
