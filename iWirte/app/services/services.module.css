@@ -7,6 +7,18 @@
   overflow: hidden;
 }
 
+.header::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(240, 121, 34, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
 .header::before {
   content: '';
   position: absolute;
@@ -150,6 +162,10 @@
   font-weight: 700;
   color: var(--maroon);
   margin-bottom: 16px;
+  background: linear-gradient(90deg, var(--maroon) 0%, #F07922 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @media only screen and (max-width: 599px) {
@@ -186,7 +202,7 @@
 }
 
 .featureIcon {
-  color: #99B7C3;
+  color: #F07922;
   margin-top: 2px;
   flex-shrink: 0;
   font-size: 1.25rem;
@@ -205,6 +221,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(139, 58, 58, 0.15);
+  border: 2px solid #F07922;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -235,6 +252,29 @@
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #F07922, #FF698D);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.cta:hover::before {
+  opacity: 1;
+}
+
+.cta {
+  z-index: 1;
 }
 
 .cta:hover {
@@ -250,6 +290,18 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.customSection::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 105, 141, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .customSection::before {
@@ -276,6 +328,20 @@
   font-weight: 700;
   color: var(--maroon);
   margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.customSection h2::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #D4AF37;
+  border-radius: 2px;
 }
 
 .customSection p {
