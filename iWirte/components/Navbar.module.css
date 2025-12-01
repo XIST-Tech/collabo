@@ -6,7 +6,7 @@
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   z-index: 1000;
-  padding: 16px 0;
+  padding: 12px 0;
   transition: all 0.3s ease;
 }
 
@@ -51,7 +51,7 @@
 .logoImage {
   border-radius: 200px;
   border: 1px solid #000;
-  width: 50px;
+  width: 80px;
   height: auto;
 }
 
@@ -86,13 +86,13 @@
 }
 
 .navLink {
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   line-height: 1.5rem;
   font-weight: 500;
   color: #5f6368;
   font-family: "Google Sans", arial, sans-serif;
   position: relative;
-  padding: 8px 0;
+  padding: 12px 0;
   transition: color 0.2s ease;
 }
 
