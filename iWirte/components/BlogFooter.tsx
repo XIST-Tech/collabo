@@ -3,11 +3,15 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import SubscriptionModal from './SubscriptionModal';
 import styles from './BlogFooter.module.css';
 
 export default function BlogFooter() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalType, setModalType] = useState<'success' | 'already-subscribed' | 'error' | null>(null);
+  const [modalMessage, setModalMessage] = useState('');
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,13 +21,29 @@ export default function BlogFooter() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
       });
-      if (response.ok) {
+
+      const data = await response.json();
+
+      if (data.success) {
         setEmail('');
         setSubscribed(true);
-        setTimeout(() => setSubscribed(false), 5000);
+        setModalType('success');
+        setModalMessage(data.message);
+        setModalOpen(true);
+      } else if (data.alreadySubscribed) {
+        setModalType('already-subscribed');
+        setModalMessage(data.message);
+        setModalOpen(true);
+      } else {
+        setModalType('error');
+        setModalMessage(data.message || 'Subscription failed');
+        setModalOpen(true);
       }
     } catch (error) {
       console.error('Subscription error:', error);
+      setModalType('error');
+      setModalMessage('An error occurred. Please try again.');
+      setModalOpen(true);
     }
   };
 
@@ -94,6 +114,18 @@ export default function BlogFooter() {
           </form>
         </div>
       </div>
+
+      <SubscriptionModal
+        isOpen={modalOpen}
+        type={modalType}
+        message={modalMessage}
+        onClose={() => {
+          setModalOpen(false);
+          if (modalType === 'success') {
+            setSubscribed(false);
+          }
+        }}
+      />
 
       <div className={styles.divider}></div>
 
