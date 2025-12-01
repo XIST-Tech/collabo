@@ -1,0 +1,145 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  animation: slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.content {
+  background: white;
+  border-radius: 16px;
+  padding: 48px 32px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.iconWrapper {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.iconWrapper svg {
+  animation: scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.modal.success .title {
+  color: #10B981;
+}
+
+.modal.already-subscribed .title {
+  color: #F59E0B;
+}
+
+.modal.error .title {
+  color: #EF4444;
+}
+
+.message {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.closeButton {
+  background: #1f2937;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal.success .closeButton {
+  background: #10B981;
+}
+
+.modal.already-subscribed .closeButton {
+  background: #F59E0B;
+}
+
+.modal.error .closeButton {
+  background: #EF4444;
+}
+
+.closeButton:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.closeButton:active {
+  transform: translateY(0);
+}
+
+@media only screen and (max-width: 599px) {
+  .content {
+    padding: 32px 24px;
+    margin: 0 16px;
+    max-width: calc(100% - 32px);
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .message {
+    font-size: 0.95rem;
+  }
+}
