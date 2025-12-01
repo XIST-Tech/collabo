@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SubscriptionModal from '@/components/SubscriptionModal';
 import styles from './home.module.css';
 
 export default function Home() {
@@ -12,6 +13,9 @@ export default function Home() {
   const [subscribed, setSubscribed] = useState(false);
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalType, setModalType] = useState<'success' | 'already-subscribed' | 'error' | null>(null);
+  const [modalMessage, setModalMessage] = useState('');
 
   const heroGifs = [
     'https://hgtwbiyrrmkauzsicqug.supabase.co/storage/v1/object/public/pictures/gif2.gif',
@@ -70,13 +74,29 @@ export default function Home() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
       });
-      if (response.ok) {
+
+      const data = await response.json();
+
+      if (data.success) {
         setEmail('');
         setSubscribed(true);
-        setTimeout(() => setSubscribed(false), 5000);
+        setModalType('success');
+        setModalMessage(data.message);
+        setModalOpen(true);
+      } else if (data.alreadySubscribed) {
+        setModalType('already-subscribed');
+        setModalMessage(data.message);
+        setModalOpen(true);
+      } else {
+        setModalType('error');
+        setModalMessage(data.message || 'Subscription failed');
+        setModalOpen(true);
       }
     } catch (error) {
       console.error('Subscription error:', error);
+      setModalType('error');
+      setModalMessage('An error occurred. Please try again.');
+      setModalOpen(true);
     }
   };
 
@@ -259,11 +279,6 @@ export default function Home() {
           <div className={styles.newsletterContent}>
             <h2>Stay in the Loop</h2>
             <p>Get insights, writing tips, and updates from the iWrite blog</p>
-            {subscribed && (
-              <div className={styles.successMessage}>
-                ✓ Successfully subscribed! Check your email for confirmation.
-              </div>
-            )}
             <form className={styles.newsletterForm} onSubmit={handleNewsletterSignup}>
               <input
                 type="email"
@@ -279,6 +294,18 @@ export default function Home() {
             </form>
           </div>
         </section>
+
+        <SubscriptionModal
+          isOpen={modalOpen}
+          type={modalType}
+          message={modalMessage}
+          onClose={() => {
+            setModalOpen(false);
+            if (modalType === 'success') {
+              setSubscribed(false);
+            }
+          }}
+        />
       </main>
       <Footer />
     </>
