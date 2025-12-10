@@ -2,7 +2,7 @@
   width: 100%;
   background: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.17);
-  padding: 20px 0 35px;
+  padding: 5px 0 35px;
   --logo-width: 240px;
   --logo-height: 140px;
   --logo-padding-top: 24px;
@@ -24,7 +24,7 @@
 .brand {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 4px;
   padding: var(--logo-padding-top) var(--logo-padding-right) var(--logo-padding-bottom) var(--logo-padding-left);
 }
 
