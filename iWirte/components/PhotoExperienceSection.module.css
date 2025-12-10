@@ -17,11 +17,15 @@
   background: #FAF9F6;
   padding: 80px 0;
   position: relative;
+  /* WIDTH: Adjust image column proportions */
   --leftColumnWidth: 105px;
+  --largeImageFlex: 1fr;
+  /* HEIGHT: Adjust vertical dimensions */
   --galleryHeight: 520px;
   --leftImagesHeightRatio: 70%;
   --smallImageTopFlex: 0.55;
   --smallImageBottomFlex: 0.40;
+  /* GAPS: Adjust spacing */
   --imageGapLarge: 48px;
   --imageGapSmall: 40px;
 }
