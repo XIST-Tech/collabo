@@ -52,7 +52,7 @@ export default function BlogFooter() {
       <div className={styles.container}>
         <div className={styles.brand}>
           <Image
-            src="https://cdn.builder.io/api/v1/image/assets%2Fa5e86544341e481c89c33f6375032db8%2Fd46f76e2e0424b9793609235f65a11de?format=webp&width=800"
+            src="https://cdn.builder.io/api/v1/image/assets%2Fa5e86544341e481c89c33f6375032db8%2F27e2eb90dd8341778a56ff95a4bb321d?format=webp&width=800"
             alt="iWrite Logo"
             width={240}
             height={140}
