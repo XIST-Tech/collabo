@@ -215,7 +215,7 @@
 /* Image Gallery */
 .imageGallery {
   display: grid;
-  grid-template-columns: var(--leftColumnWidth) 1fr;
+  grid-template-columns: var(--leftColumnWidth) var(--largeImageFlex);
   gap: var(--imageGapLarge);
   height: var(--galleryHeight);
   align-items: center;
