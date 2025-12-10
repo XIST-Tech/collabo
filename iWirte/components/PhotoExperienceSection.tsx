@@ -30,9 +30,9 @@ export default function PhotoExperienceSection() {
 
         <div className={styles.content}>
           <span className={styles.label}>Not your regular blog</span>
-          <h2 className={styles.title}>Experience Photography Like Never Before</h2>
+          <h2 className={styles.title}>You never know how far a shared perspective will take minds.</h2>
           <p className={styles.description}>
-            With our state-of-the-art equipment and artistic vision, we transform ordinary moments into extraordinary memories. Our talented photographers...
+            Find some reflections from everyday stories and book takes, a few trending tech tools to help boost productivity, and thoughts on discoveries and innovations happening in the engineering and aviation space. And hey, whoever said memes can’t teach a thing or two?
           </p>
           <Link href="/blog" className={styles.subscribeButton}>
             Subscribe
