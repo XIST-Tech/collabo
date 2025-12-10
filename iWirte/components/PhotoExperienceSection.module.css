@@ -18,7 +18,7 @@
   padding: 80px 0;
   position: relative;
   /* WIDTH: Adjust image column proportions */
-  --leftColumnWidth: 105px;
+  --leftColumnWidth: 210px;
   --largeImageFlex: 0.65fr;
   /* HEIGHT: Adjust vertical dimensions */
   --galleryHeight: 520px;
