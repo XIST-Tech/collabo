@@ -161,33 +161,33 @@
 /* Image Gallery */
 .imageGallery {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 32px;
-  height: 500px;
+  grid-template-columns: 105px 1fr;
+  gap: 48px;
+  height: 520px;
   align-items: center;
 }
 
 @media only screen and (max-width: 1023px) {
   .imageGallery {
-    height: 450px;
-    grid-template-columns: 120px 1fr;
-    gap: 28px;
+    height: 480px;
+    grid-template-columns: 95px 1fr;
+    gap: 40px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .imageGallery {
-    height: 400px;
-    grid-template-columns: 110px 1fr;
-    gap: 20px;
+    height: 420px;
+    grid-template-columns: 85px 1fr;
+    gap: 28px;
   }
 }
 
 @media only screen and (max-width: 599px) {
   .imageGallery {
-    height: 350px;
-    grid-template-columns: 100px 1fr;
-    gap: 16px;
+    height: 360px;
+    grid-template-columns: 75px 1fr;
+    gap: 20px;
   }
 }
 
