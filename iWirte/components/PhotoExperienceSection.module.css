@@ -214,60 +214,22 @@
 /* Image Gallery */
 .imageGallery {
   display: grid;
-  grid-template-columns: 105px 1fr;
-  gap: 48px;
-  height: 520px;
+  grid-template-columns: var(--leftColumnWidth) 1fr;
+  gap: var(--imageGapLarge);
+  height: var(--galleryHeight);
   align-items: center;
-}
-
-@media only screen and (max-width: 1023px) {
-  .imageGallery {
-    height: 480px;
-    grid-template-columns: 95px 1fr;
-    gap: 40px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .imageGallery {
-    height: 420px;
-    grid-template-columns: 85px 1fr;
-    gap: 28px;
-  }
-}
-
-@media only screen and (max-width: 599px) {
-  .imageGallery {
-    height: 360px;
-    grid-template-columns: 75px 1fr;
-    gap: 20px;
-  }
 }
 
 .leftImages {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  height: 70%;
+  gap: var(--imageGapSmall);
+  height: var(--leftImagesHeightRatio);
   justify-content: center;
 }
 
-@media only screen and (max-width: 767px) {
-  .leftImages {
-    gap: 16px;
-    height: 65%;
-  }
-}
-
-@media only screen and (max-width: 599px) {
-  .leftImages {
-    gap: 12px;
-    height: 60%;
-  }
-}
-
 .smallImageTop {
-  flex: 0.55;
+  flex: var(--smallImageTopFlex);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(43, 61, 79, 0.12);
@@ -275,7 +237,7 @@
 }
 
 .smallImageBottom {
-  flex: 0.45;
+  flex: var(--smallImageBottomFlex);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(43, 61, 79, 0.12);
