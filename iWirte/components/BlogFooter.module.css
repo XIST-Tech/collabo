@@ -2,7 +2,7 @@
   width: 100%;
   background: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.17);
-  padding: 25px 0 35px;
+  padding: 20px 0 35px;
   --logo-width: 240px;
   --logo-height: 140px;
   --logo-padding-top: 24px;
@@ -24,6 +24,7 @@
 .brand {
   display: flex;
   flex-direction: column;
+  gap: 12px;
   padding: var(--logo-padding-top) var(--logo-padding-right) var(--logo-padding-bottom) var(--logo-padding-left);
 }
 
@@ -42,8 +43,8 @@
 .socialIcons {
   display: flex;
   gap: 20px;
-  margin-top: 24px;
-  padding-top: calc(24px - var(--logo-padding-bottom));
+  margin-top: auto;
+  padding-top: 12px;
 }
 
 .socialIcons a {
