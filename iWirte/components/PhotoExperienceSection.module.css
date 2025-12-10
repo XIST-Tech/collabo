@@ -23,7 +23,7 @@
   --smallImageTopFlex: 0.55;
   --smallImageBottomFlex: 0.40;
   --imageGapLarge: 48px;
-  --imageGapSmall: 30px;
+  --imageGapSmall: 35px;
 }
 
 @media only screen and (max-width: 1023px) {
