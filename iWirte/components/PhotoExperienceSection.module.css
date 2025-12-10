@@ -161,57 +161,68 @@
 /* Image Gallery */
 .imageGallery {
   display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 24px;
-  height: 460px;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  height: 500px;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1023px) {
   .imageGallery {
-    height: 400px;
-    grid-template-columns: 160px 1fr;
-    gap: 20px;
+    height: 450px;
+    grid-template-columns: 120px 1fr;
+    gap: 28px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .imageGallery {
-    height: 360px;
-    grid-template-columns: 140px 1fr;
-    gap: 16px;
+    height: 400px;
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
   }
 }
 
 @media only screen and (max-width: 599px) {
   .imageGallery {
-    height: 320px;
-    grid-template-columns: 120px 1fr;
-    gap: 12px;
+    height: 350px;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
   }
 }
 
 .leftImages {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  height: 100%;
+  gap: 20px;
+  height: 70%;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 767px) {
   .leftImages {
     gap: 16px;
+    height: 65%;
   }
 }
 
 @media only screen and (max-width: 599px) {
   .leftImages {
     gap: 12px;
+    height: 60%;
   }
 }
 
-.smallImageTop,
+.smallImageTop {
+  flex: 0.55;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(43, 61, 79, 0.12);
+  position: relative;
+}
+
 .smallImageBottom {
-  flex: 1;
+  flex: 0.45;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(43, 61, 79, 0.12);
