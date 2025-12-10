@@ -53,7 +53,7 @@
 @media only screen and (max-width: 599px) {
   .photoExperienceSection {
     --leftColumnWidth: 200px;
-    --largeImageFlex: 0.85fr;
+    --largeImageFlex: 0.95fr;
     --galleryHeight: 360px;
     --leftImagesHeightRatio: 60%;
     --imageGapSmall: 12px;
