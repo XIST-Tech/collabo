@@ -18,14 +18,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   gap: 80px;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .brand {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: var(--logo-padding-top) var(--logo-padding-right) var(--logo-padding-bottom) var(--logo-padding-left);
+  gap: 8px;
+  padding: 0 var(--logo-padding-right) var(--logo-padding-bottom) var(--logo-padding-left);
+  justify-content: flex-start;
 }
 
 .brandName {
@@ -62,6 +63,7 @@
 .brandLogo {
   width: var(--logo-width);
   height: var(--logo-height);
+  margin-bottom: 0;
 }
 
 .socialIcons svg {
