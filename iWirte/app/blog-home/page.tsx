@@ -6,6 +6,7 @@ import { createClient } from '@/lib/supabase';
 import BlogNavbar from '@/components/BlogNavbar';
 import BlogFooter from '@/components/BlogFooter';
 import BlogFooterMobile from '@/components/BlogFooterMobile';
+import PhotoExperienceSection from '@/components/PhotoExperienceSection';
 import styles from './blog-home.module.css';
 
 interface BlogPost {
@@ -158,35 +159,7 @@ export default function BlogHomePage() {
           </div>
         </section>
 
-        <section className={styles.characteristicsSection}>
-          <div className={styles.characteristicsHeader}>
-            <h2>Not Your Regular Blog</h2>
-            <p>What you'll find woven into the fabric of every post</p>
-          </div>
-          <div className={styles.characteristicsGrid}>
-            <div className={styles.characteristicItem}>
-              <img 
-                src="https://api.builder.io/api/v1/image/assets/TEMP/445c0e1093a71bc686ef2ea9b9c8db156272baad?width=754" 
-                alt="Insightful"
-              />
-              <h3>Insightful</h3>
-            </div>
-            <div className={styles.characteristicItem}>
-              <img 
-                src="https://api.builder.io/api/v1/image/assets/TEMP/cbddb60b9f52f3a9129ab1861cf1cf10fdea37a9?width=754" 
-                alt="Uncensored"
-              />
-              <h3>Uncensored</h3>
-            </div>
-            <div className={styles.characteristicItem}>
-              <img 
-                src="https://api.builder.io/api/v1/image/assets/TEMP/fe18b3f0174200483981dd01d4926900da13f9ce?width=754" 
-                alt="Fun"
-              />
-              <h3>Fun</h3>
-            </div>
-          </div>
-        </section>
+        <PhotoExperienceSection />
 
         <section className={styles.latestPostsSection}>
           <div className={styles.latestPostsContent}>

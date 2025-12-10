@@ -1,0 +1,255 @@
+.photoExperienceSection {
+  background: #FAF9F6;
+  padding: 80px 0;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  .photoExperienceSection {
+    padding: 60px 0;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1023px) {
+  .container {
+    padding: 0 40px;
+    gap: 60px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+    gap: 40px;
+  }
+}
+
+/* Content comes first on mobile */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .content {
+    order: -1;
+  }
+}
+
+.label {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #B88E2F;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 599px) {
+  .label {
+    font-size: 18px;
+  }
+}
+
+.title {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #2B3D4F;
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+@media only screen and (max-width: 1023px) {
+  .title {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .title {
+    font-size: 28px;
+  }
+}
+
+.description {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(43, 61, 79, 0.75);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .description {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .description {
+    font-size: 16px;
+  }
+}
+
+.subscribeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px 48px;
+  background: #B88E2F;
+  border-radius: 16px;
+  border: none;
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #FCF3F3;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: 12px;
+  box-shadow: 0 4px 16px rgba(184, 142, 47, 0.25);
+}
+
+.subscribeButton:hover {
+  background: #A67D28;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(184, 142, 47, 0.35);
+}
+
+.subscribeButton:active {
+  transform: translateY(0);
+}
+
+.subscribeButton svg {
+  flex-shrink: 0;
+}
+
+@media only screen and (max-width: 599px) {
+  .subscribeButton {
+    font-size: 18px;
+    padding: 18px 36px;
+  }
+
+  .subscribeButton svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Image Gallery */
+.imageGallery {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  height: 460px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .imageGallery {
+    height: 400px;
+    grid-template-columns: 160px 1fr;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .imageGallery {
+    height: 360px;
+    grid-template-columns: 140px 1fr;
+    gap: 16px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .imageGallery {
+    height: 320px;
+    grid-template-columns: 120px 1fr;
+    gap: 12px;
+  }
+}
+
+.leftImages {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .leftImages {
+    gap: 16px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .leftImages {
+    gap: 12px;
+  }
+}
+
+.smallImageTop,
+.smallImageBottom {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(43, 61, 79, 0.12);
+  position: relative;
+}
+
+@media only screen and (max-width: 599px) {
+  .smallImageTop,
+  .smallImageBottom {
+    border-radius: 16px;
+  }
+}
+
+.smallImageTop img,
+.smallImageBottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.largeImage {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(43, 61, 79, 0.15);
+  position: relative;
+  height: 100%;
+}
+
+@media only screen and (max-width: 599px) {
+  .largeImage {
+    border-radius: 16px;
+  }
+}
+
+.largeImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
