@@ -18,8 +18,8 @@
   padding: 80px 0;
   position: relative;
   /* WIDTH: Adjust image column proportions */
-  --leftColumnWidth: 210px;
-  --largeImageFlex: 0.65fr;
+  --leftColumnWidth: 250px;
+  --largeImageFlex: 0.75fr;
   /* HEIGHT: Adjust vertical dimensions */
   --galleryHeight: 520px;
   --leftImagesHeightRatio: 70%;
@@ -32,7 +32,8 @@
 
 @media only screen and (max-width: 1023px) {
   .photoExperienceSection {
-    --leftColumnWidth: 190px;
+    --leftColumnWidth: 220px;
+    --largeImageFlex: 0.70fr;
     --galleryHeight: 480px;
     --imageGapLarge: 40px;
   }
@@ -40,7 +41,8 @@
 
 @media only screen and (max-width: 767px) {
   .photoExperienceSection {
-    --leftColumnWidth: 170px;
+    --leftColumnWidth: 200px;
+    --largeImageFlex: 0.60fr;
     --galleryHeight: 420px;
     --leftImagesHeightRatio: 65%;
     --imageGapLarge: 28px;
@@ -50,8 +52,8 @@
 
 @media only screen and (max-width: 599px) {
   .photoExperienceSection {
-    --leftColumnWidth: 140px;
-    --largeImageFlex: 0.55fr;
+    --leftColumnWidth: 170px;
+    --largeImageFlex: 0.65fr;
     --galleryHeight: 360px;
     --leftImagesHeightRatio: 60%;
     --imageGapSmall: 12px;
