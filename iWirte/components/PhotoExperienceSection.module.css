@@ -50,7 +50,8 @@
 
 @media only screen and (max-width: 599px) {
   .photoExperienceSection {
-    --leftColumnWidth: 75px;
+    --leftColumnWidth: 120px;
+    --largeImageFlex: 0.45fr;
     --galleryHeight: 360px;
     --leftImagesHeightRatio: 60%;
     --imageGapSmall: 12px;
@@ -70,14 +71,14 @@
   padding: 0 72px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
 }
 
 @media only screen and (max-width: 1023px) {
   .container {
     padding: 0 40px;
-    gap: 60px;
+    gap: 40px;
   }
 }
 
@@ -85,7 +86,7 @@
   .container {
     grid-template-columns: 1fr;
     padding: 0 24px;
-    gap: 40px;
+    gap: 20px;
   }
 }
 

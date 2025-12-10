@@ -3,6 +3,12 @@
   background: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.17);
   padding: 50px 0 35px;
+  --logo-width: 102px;
+  --logo-height: 34px;
+  --logo-padding-top: 24px;
+  --logo-padding-right: 0;
+  --logo-padding-bottom: 0;
+  --logo-padding-left: 0;
 }
 
 .container {
@@ -18,6 +24,7 @@
 .brand {
   display: flex;
   flex-direction: column;
+  padding: var(--logo-padding-top) var(--logo-padding-right) var(--logo-padding-bottom) var(--logo-padding-left);
 }
 
 .brandName {
@@ -36,7 +43,7 @@
   display: flex;
   gap: 20px;
   margin-top: 24px;
-  padding-top: 24px;
+  padding-top: calc(24px - var(--logo-padding-bottom));
 }
 
 .socialIcons a {
@@ -49,6 +56,11 @@
 .socialIcons a:hover {
   transform: translateY(-3px);
   opacity: 0.8;
+}
+
+.brandLogo {
+  width: var(--logo-width);
+  height: var(--logo-height);
 }
 
 .socialIcons svg {
