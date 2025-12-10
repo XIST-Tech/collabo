@@ -19,7 +19,7 @@
   position: relative;
   /* WIDTH: Adjust image column proportions */
   --leftColumnWidth: 105px;
-  --largeImageFlex: 0.6fr;
+  --largeImageFlex: 0.65fr;
   /* HEIGHT: Adjust vertical dimensions */
   --galleryHeight: 520px;
   --leftImagesHeightRatio: 70%;
