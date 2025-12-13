@@ -192,6 +192,12 @@
   box-shadow: 0 4px 16px rgba(184, 142, 47, 0.25);
 }
 
+@media only screen and (min-width: 1024px) {
+  .subscribeButton {
+    padding: 24px 32px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .subscribeButton {
     align-self: center;
