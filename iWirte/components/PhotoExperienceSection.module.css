@@ -248,7 +248,7 @@
 @media only screen and (max-width: 599px) {
   .imageGallery {
     grid-template-columns: 12em 14em;
-    gap: 2em;
+    gap: 1.5em;
   }
 }
 
