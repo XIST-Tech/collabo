@@ -240,6 +240,13 @@
   }
 }
 
+@media only screen and (max-width: 599px) {
+  .imageGallery {
+    grid-template-columns: 10em 18em;
+    gap: 1em;
+  }
+}
+
 .leftImages {
   display: flex;
   flex-direction: column;
