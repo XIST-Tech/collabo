@@ -36,7 +36,7 @@ export default function PhotoExperienceSection() {
           </p>
           <Link href="/blog" className={styles.subscribeButton}>
             Subscribe
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="20" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 9L13.5 10.5L18 15L12 21" stroke="#FCF3F3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </Link>
