@@ -240,15 +240,16 @@
 
 @media only screen and (max-width: 767px) {
   .imageGallery {
-    width: fit-content;
+    width: 100%;
     margin: 0 auto;
   }
 }
 
 @media only screen and (max-width: 599px) {
   .imageGallery {
-    grid-template-columns: 12em 14em;
-    gap: 1.5em;
+    grid-template-columns: 1fr 1.2fr;
+    width: 100%;
+    gap: 16px;
   }
 }
 

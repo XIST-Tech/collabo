@@ -87,7 +87,7 @@
 
 .descriptionContent p {
   font-family: 'Poppins', -apple-system, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   line-height: normal;
   color: #000;
@@ -104,6 +104,7 @@
 
 @media only screen and (min-width: 1024px) {
   .container {
+    max-width: 1200px;
     padding: 0 0;
   }
 }
