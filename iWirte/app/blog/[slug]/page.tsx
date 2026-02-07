@@ -122,7 +122,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       <div className={styles.article}>
         {/* Left Sidebar - Table of Contents (Desktop only) */}
         <div className={styles.leftSidebar}>
-          <TableOfContents content={blog.content} />
+          <TableOfContents content={blog.content} blogTitle={blog.title} />
         </div>
 
         {/* Center - Main Content */}
