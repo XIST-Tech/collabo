@@ -113,8 +113,8 @@
 /* CTA Section */
 .ctaSection {
   background: linear-gradient(135deg, #B88E2F 0%, #9a7628 100%);
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 8px;
+  padding: 16px;
   color: white;
 }
 
