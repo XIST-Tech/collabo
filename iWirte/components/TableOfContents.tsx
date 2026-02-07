@@ -9,7 +9,12 @@ interface Heading {
   level: number;
 }
 
-export default function TableOfContents({ content }: { content: string }) {
+interface TableOfContentsProps {
+  content: string;
+  blogTitle?: string;
+}
+
+export default function TableOfContents({ content, blogTitle }: TableOfContentsProps) {
   const [headings, setHeadings] = useState<Heading[]>([]);
   const [activeId, setActiveId] = useState<string>('');
 
