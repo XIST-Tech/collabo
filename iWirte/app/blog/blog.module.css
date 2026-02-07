@@ -297,7 +297,7 @@
 }
 
 .postInfo {
-  padding: 16px;
+  padding: 24px;
   background: #F4F5F7;
 }
 
@@ -307,7 +307,7 @@
   font-weight: 600;
   line-height: 1.2;
   color: #3A3A3A;
-  margin: 0 0 8px 0;
+  margin: 0 0 12px 0;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -317,15 +317,15 @@
 
 .postExcerpt {
   font-family: 'Poppins', -apple-system, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #898989;
-  margin: 0 0 12px 0;
+  margin: 0 0 16px 0;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
