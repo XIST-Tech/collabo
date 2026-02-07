@@ -99,7 +99,7 @@
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 18px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -119,8 +119,8 @@
   gap: 16px;
   width: 100%;
   box-sizing: border-box;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .leftSidebar {
@@ -508,7 +508,7 @@
   }
 
   .descriptionContent {
-    padding: 16px 24px;
+    padding: 14px 14px;
   }
 
   .descriptionContent p {
