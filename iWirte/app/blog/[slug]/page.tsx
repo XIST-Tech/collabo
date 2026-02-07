@@ -2,12 +2,15 @@ import { createClient } from '@/lib/supabase';
 import { format } from 'date-fns';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import BlogNavbar from '@/components/BlogNavbar';
 import BlogFooter from '@/components/BlogFooter';
 import BlogFooterMobile from '@/components/BlogFooterMobile';
 import BlogReactions from '@/components/BlogReactions';
 import BlogComments from '@/components/BlogComments';
 import WelcomeModal from '@/components/WelcomeModal';
+import TableOfContents from '@/components/TableOfContents';
+import BlogShareSidebar from '@/components/BlogShareSidebar';
 import styles from './blog-post.module.css';
 
 export const revalidate = 60;
@@ -27,12 +30,58 @@ async function getBlog(slug: string) {
   return data;
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const blog = await getBlog(params.slug);
+
+  if (!blog) {
+    return {
+      title: 'Blog Not Found',
+      description: 'The blog post you are looking for does not exist.',
+    };
+  }
+
+  const blogUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/blog/${params.slug}`;
+  const featuredImage = blog.featured_image || 'https://api.builder.io/api/v1/image/assets/TEMP/9e49dcaf5e4e4432d24340132ccef5037868fd5b?width=2880';
+
+  return {
+    title: blog.title,
+    description: blog.excerpt || blog.title,
+    openGraph: {
+      title: blog.title,
+      description: blog.excerpt || blog.title,
+      url: blogUrl,
+      type: 'article',
+      images: [
+        {
+          url: featuredImage,
+          width: 1200,
+          height: 630,
+          alt: blog.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: blog.title,
+      description: blog.excerpt || blog.title,
+      images: [featuredImage],
+    },
+    canonical: blogUrl,
+  };
+}
+
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const blog = await getBlog(params.slug);
 
   if (!blog) {
     notFound();
   }
+
+  const blogUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/blog/${params.slug}`;
 
   return (
     <>
