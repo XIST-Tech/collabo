@@ -9,13 +9,13 @@ export default function PhotoExperienceSection() {
           <div className={styles.leftImages}>
             <div className={styles.smallImageTop}>
               <img 
-                src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=400&auto=format&fit=crop" 
+                src="/sharing.jpg" 
                 alt="Photography moment 1"
               />
             </div>
             <div className={styles.smallImageBottom}>
               <img 
-                src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400&auto=format&fit=crop" 
+                src="/lovers.png" 
                 alt="Photography moment 2"
               />
             </div>

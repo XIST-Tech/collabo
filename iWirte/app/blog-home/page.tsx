@@ -131,7 +131,7 @@ export default function BlogHomePage() {
         <section className={styles.hero}>
           <div className={styles.heroImage}>
             <img 
-              src="https://api.builder.io/api/v1/image/assets/TEMP/c27fbc899849064013e341710b529e9ad4039ac3?width=2880" 
+              src="/blog hero.png" 
               alt="Blog Hero Background"
             />
           </div>
