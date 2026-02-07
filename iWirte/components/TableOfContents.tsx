@@ -14,21 +14,22 @@ export default function TableOfContents({ content }: { content: string }) {
   const [activeId, setActiveId] = useState<string>('');
 
   useEffect(() => {
-    // Parse the HTML content to extract headings
-    const parser = new DOMParser();
-    const htmlDoc = parser.parseFromString(content, 'text/html');
+    // Extract headings from the DOM (after the page is mounted)
     const headingElements = Array.from(
-      htmlDoc.querySelectorAll('h1, h2, h3, h4, h5, h6')
-    );
+      document.querySelectorAll('.richTextContent h1, .richTextContent h2, .richTextContent h3, .richTextContent h4, .richTextContent h5, .richTextContent h6')
+    ) as HTMLElement[];
 
     const extractedHeadings: Heading[] = headingElements.map((heading, index) => {
       const level = parseInt(heading.tagName[1]);
       const text = heading.textContent || `Heading ${index + 1}`;
-      const id = heading.id || `heading-${index}`;
-      
+      let id = heading.id;
+
       // Add id to the heading if it doesn't have one
-      heading.id = id;
-      
+      if (!id) {
+        id = `heading-${index}`;
+        heading.id = id;
+      }
+
       return { id, text, level };
     });
 
