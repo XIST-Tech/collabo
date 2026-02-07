@@ -112,24 +112,13 @@ export default function BlogShareSidebar({ title, url, description }: BlogShareS
 
       {/* CTA Section */}
       <div className={styles.ctaSection}>
-        <h3 className={styles.sectionTitle}>Liked This Article?</h3>
+        <h3 className={styles.sectionTitle}>Subscribe</h3>
         <p className={styles.ctaText}>
-          {description || 'Subscribe to our newsletter to get more great content delivered to your inbox.'}
+          Get fresh content delivered to your inbox
         </p>
         <button className={styles.ctaButton}>
           Subscribe Now
         </button>
-        <div className={styles.ctaNote}>
-          Get weekly insights and tips directly in your inbox.
-        </div>
-      </div>
-
-      {/* Like & Comment Section */}
-      <div className={styles.engagementSection}>
-        <h3 className={styles.sectionTitle}>Share Your Thoughts</h3>
-        <p className={styles.engagementText}>
-          Have something to say? Use the comment section below to share your thoughts and engage with our community.
-        </p>
       </div>
     </aside>
   );
