@@ -87,7 +87,7 @@
 
 .descriptionContent p {
   font-family: 'Poppins', -apple-system, sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 500;
   line-height: normal;
   color: #000;
@@ -511,7 +511,7 @@
   }
 
   .descriptionContent p {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .replyThread {
