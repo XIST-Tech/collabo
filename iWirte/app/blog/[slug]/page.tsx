@@ -87,12 +87,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     <>
       <BlogNavbar />
       <WelcomeModal blogId={blog.id} />
-      
+
       {/* Hero Section with Cover Image */}
       <section className={styles.hero}>
         <div className={styles.heroImageWrapper}>
-          <img 
-            src={blog.featured_image || 'https://api.builder.io/api/v1/image/assets/TEMP/9e49dcaf5e4e4432d24340132ccef5037868fd5b?width=2880'} 
+          <img
+            src={blog.featured_image || 'https://api.builder.io/api/v1/image/assets/TEMP/9e49dcaf5e4e4432d24340132ccef5037868fd5b?width=2880'}
             alt={blog.title}
             className={styles.heroImage}
           />
@@ -118,29 +118,46 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         </section>
       )}
 
-      {/* Main Article Content */}
+      {/* Main Article Content with Sidebars */}
       <div className={styles.article}>
-        <article className={styles.container}>
-          <div
-            className={styles.richTextContent}
-            dangerouslySetInnerHTML={{ __html: blog.content }}
-          />
+        {/* Left Sidebar - Table of Contents (Desktop only) */}
+        <div className={styles.leftSidebar}>
+          <TableOfContents content={blog.content} />
+        </div>
 
-          <div className={styles.reactionsSection}>
-            <BlogReactions 
-              blogId={blog.id} 
-              initialLikes={blog.likes || 0} 
-              initialLoves={blog.loves || 0} 
-              initialDislikes={blog.dislikes || 0} 
+        {/* Center - Main Content */}
+        <div className={styles.mainContent}>
+          <article className={styles.container}>
+            <div
+              className={styles.richTextContent}
+              dangerouslySetInnerHTML={{ __html: blog.content }}
             />
-          </div>
-        </article>
 
-        <section className={styles.container}>
-          <div className={styles.commentsSection}>
-            <BlogComments blogId={blog.id} />
-          </div>
-        </section>
+            <div className={styles.reactionsSection}>
+              <BlogReactions
+                blogId={blog.id}
+                initialLikes={blog.likes || 0}
+                initialLoves={blog.loves || 0}
+                initialDislikes={blog.dislikes || 0}
+              />
+            </div>
+          </article>
+
+          <section className={styles.container}>
+            <div className={styles.commentsSection}>
+              <BlogComments blogId={blog.id} />
+            </div>
+          </section>
+        </div>
+
+        {/* Right Sidebar - Share & CTA (Desktop only) */}
+        <div className={styles.rightSidebar}>
+          <BlogShareSidebar
+            title={blog.title}
+            url={blogUrl}
+            description={blog.excerpt}
+          />
+        </div>
       </div>
 
       <BlogFooter />
