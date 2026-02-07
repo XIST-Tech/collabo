@@ -104,15 +104,60 @@
 
 @media only screen and (min-width: 1024px) {
   .container {
-    max-width: 1200px;
-    padding: 0 0;
+    max-width: 800px;
+    padding: 0 40px;
+    margin: 0;
   }
 }
 
+/* Three-Column Layout */
 .article {
   min-height: 100vh;
   padding-top: 64px;
   padding-bottom: 64px;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+}
+
+.leftSidebar {
+  display: none;
+  width: 240px;
+  flex-shrink: 0;
+  padding-right: 20px;
+}
+
+.mainContent {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+}
+
+.rightSidebar {
+  display: none;
+  width: 240px;
+  flex-shrink: 0;
+  padding-left: 20px;
+}
+
+@media only screen and (min-width: 1536px) {
+  .article {
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .leftSidebar {
+    display: block;
+  }
+
+  .mainContent {
+    max-width: 800px;
+  }
+
+  .rightSidebar {
+    display: block;
+  }
 }
 
 .richTextContent {
