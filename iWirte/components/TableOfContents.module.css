@@ -1,0 +1,88 @@
+.tableOfContents {
+  position: sticky;
+  top: 100px;
+  padding: 20px;
+  background: #F9F1E7;
+  border-radius: 8px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.title {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3A3A3A;
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #B88E2F;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  margin: 0;
+  padding: 6px 0;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: block;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Poppins', -apple-system, sans-serif;
+}
+
+.link:hover {
+  color: #B88E2F;
+  background-color: rgba(184, 142, 47, 0.1);
+}
+
+.link.active {
+  color: #B88E2F;
+  font-weight: 700;
+  background-color: rgba(184, 142, 47, 0.1);
+  border-left: 3px solid #B88E2F;
+  padding-left: 5px;
+}
+
+.noContent {
+  color: #999;
+  font-size: 14px;
+  margin: 10px 0 0 0;
+}
+
+/* Scrollbar styling */
+.tableOfContents::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tableOfContents::-webkit-scrollbar-track {
+  background: rgba(184, 142, 47, 0.1);
+  border-radius: 8px;
+}
+
+.tableOfContents::-webkit-scrollbar-thumb {
+  background: #B88E2F;
+  border-radius: 8px;
+}
+
+.tableOfContents::-webkit-scrollbar-thumb:hover {
+  background: #9a7628;
+}
