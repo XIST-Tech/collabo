@@ -125,25 +125,24 @@
 
 .ctaText {
   font-family: 'Poppins', -apple-system, sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.95);
-  margin: 0 0 16px 0;
+  margin: 0 0 12px 0;
 }
 
 .ctaButton {
   width: 100%;
-  padding: 12px 20px;
+  padding: 10px 16px;
   background: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   color: #B88E2F;
   font-family: 'Poppins', -apple-system, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-bottom: 12px;
 }
 
 .ctaButton:hover {
