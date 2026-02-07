@@ -656,8 +656,13 @@
     font-size: 16px;
   }
 
+  .postExcerpt {
+    font-size: 14px;
+    -webkit-line-clamp: 2;
+  }
+
   .postInfo {
-    padding: 12px;
+    padding: 16px;
   }
 
   .actions {
