@@ -574,11 +574,15 @@
   }
 
   .postExcerpt {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .postDate {
     font-size: 16px;
+  }
+
+  .postInfo {
+    padding: 20px;
   }
 
   .pagination {
