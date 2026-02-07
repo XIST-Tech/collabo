@@ -1,0 +1,184 @@
+.sidebar {
+  position: sticky;
+  top: 145px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: calc(100vh - 145px);
+  overflow-y: auto;
+  padding: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    top: 100px;
+    max-height: calc(100vh - 120px);
+  }
+}
+
+.sectionTitle {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3A3A3A;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #B88E2F;
+}
+
+/* Share Section */
+.shareSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shareButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.shareButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: #F5F5F5;
+  border: 2px solid transparent;
+  color: #3A3A3A;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.shareButton:hover {
+  background: #B88E2F;
+  color: white;
+  border-color: #B88E2F;
+  transform: translateY(-2px);
+}
+
+.shareButton svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.label {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  display: none;
+  white-space: nowrap;
+}
+
+/* Copy Section */
+.copySection {
+  margin-top: 8px;
+}
+
+.copyButton {
+  width: 100%;
+  padding: 10px 12px;
+  background: white;
+  border: 2px solid #B88E2F;
+  border-radius: 6px;
+  color: #B88E2F;
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.copyButton:hover {
+  background: #B88E2F;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.copyButton.copied {
+  background: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, #B88E2F 0%, #9a7628 100%);
+  border-radius: 8px;
+  padding: 16px;
+  color: white;
+}
+
+.ctaSection .sectionTitle {
+  color: white;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.ctaText {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 12px 0;
+}
+
+.ctaButton {
+  width: 100%;
+  padding: 10px 16px;
+  background: white;
+  border: none;
+  border-radius: 4px;
+  color: #B88E2F;
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Scrollbar styling */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(184, 142, 47, 0.1);
+  border-radius: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #B88E2F;
+  border-radius: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #9a7628;
+}
+
+/* Responsive - Hide on smaller screens */
+@media (max-width: 1199px) {
+  .sidebar {
+    display: none;
+  }
+}
