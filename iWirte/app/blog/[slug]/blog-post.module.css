@@ -125,7 +125,7 @@
 
 .leftSidebar {
   display: none;
-  width: 250px;
+  width: 20%;
   flex-shrink: 0;
 }
 
@@ -137,7 +137,7 @@
 
 .rightSidebar {
   display: none;
-  width: 250px;
+  width: 20%;
   flex-shrink: 0;
 }
 
