@@ -50,6 +50,9 @@ export async function generateMetadata({
   return {
     title: blog.title,
     description: blog.excerpt || blog.title,
+    alternates: {
+      canonical: blogUrl,
+    },
     openGraph: {
       title: blog.title,
       description: blog.excerpt || blog.title,
@@ -70,7 +73,6 @@ export async function generateMetadata({
       description: blog.excerpt || blog.title,
       images: [featuredImage],
     },
-    canonical: blogUrl,
   };
 }
 
