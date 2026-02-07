@@ -1,0 +1,201 @@
+.sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3A3A3A;
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #B88E2F;
+}
+
+/* Share Section */
+.shareSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shareButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.shareButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #F5F5F5;
+  border: 2px solid transparent;
+  color: #3A3A3A;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.shareButton:hover {
+  background: #B88E2F;
+  color: white;
+  border-color: #B88E2F;
+  transform: translateY(-2px);
+}
+
+.shareButton svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.label {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  display: none;
+  white-space: nowrap;
+}
+
+/* Copy Section */
+.copySection {
+  margin-top: 8px;
+}
+
+.copyButton {
+  width: 100%;
+  padding: 12px 16px;
+  background: white;
+  border: 2px solid #B88E2F;
+  border-radius: 8px;
+  color: #B88E2F;
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.copyButton:hover {
+  background: #B88E2F;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.copyButton.copied {
+  background: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, #B88E2F 0%, #9a7628 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+}
+
+.ctaSection .sectionTitle {
+  color: white;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.ctaText {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 16px 0;
+}
+
+.ctaButton {
+  width: 100%;
+  padding: 12px 20px;
+  background: white;
+  border: none;
+  border-radius: 6px;
+  color: #B88E2F;
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 12px;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ctaNote {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin: 0;
+}
+
+/* Engagement Section */
+.engagementSection {
+  background: #F9F1E7;
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid #E8D4C0;
+}
+
+.engagementText {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+/* Scrollbar styling */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(184, 142, 47, 0.1);
+  border-radius: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #B88E2F;
+  border-radius: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #9a7628;
+}
+
+/* Responsive - Hide on smaller screens */
+@media (max-width: 1023px) {
+  .sidebar {
+    display: none;
+  }
+}
