@@ -68,34 +68,54 @@ export default function TableOfContents({ content, blogTitle }: TableOfContentsP
     }
   };
 
-  if (headings.length === 0) {
-    return (
-      <div className={styles.tableOfContents}>
-        <h3 className={styles.title}>Table of Contents</h3>
-        <p className={styles.noContent}>No headings found</p>
-      </div>
-    );
-  }
-
   return (
-    <nav className={styles.tableOfContents}>
+    <div className={styles.tableOfContents}>
       <h3 className={styles.title}>Table of Contents</h3>
-      <ul className={styles.list}>
-        {headings.map((heading) => (
-          <li
-            key={heading.id}
-            className={`${styles.item} ${styles[`level-${heading.level}`]}`}
-            style={{ marginLeft: `${(heading.level - 1) * 12}px` }}
+
+      {/* Blog Title */}
+      {blogTitle && (
+        <div className={styles.blogTitle}>
+          <button
+            className={styles.titleLink}
+            onClick={() => {
+              const heroSection = document.querySelector('[class*="hero"]');
+              if (heroSection) {
+                heroSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
-            <button
-              className={`${styles.link} ${activeId === heading.id ? styles.active : ''}`}
-              onClick={() => handleClick(heading.id)}
-            >
-              {heading.text}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </nav>
+            {blogTitle}
+          </button>
+        </div>
+      )}
+
+      {/* Headings List */}
+      {headings.length === 0 ? (
+        <div className={styles.noHeadings}>
+          <p className={styles.noContent}>
+            Find different sections of the blog here
+          </p>
+        </div>
+      ) : (
+        <nav className={styles.headingsList}>
+          <ul className={styles.list}>
+            {headings.map((heading) => (
+              <li
+                key={heading.id}
+                className={`${styles.item} ${styles[`level-${heading.level}`]}`}
+                style={{ marginLeft: `${(heading.level - 1) * 12}px` }}
+              >
+                <button
+                  className={`${styles.link} ${activeId === heading.id ? styles.active : ''}`}
+                  onClick={() => handleClick(heading.id)}
+                >
+                  {heading.text}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+    </div>
   );
 }
