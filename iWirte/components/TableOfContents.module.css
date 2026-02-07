@@ -1,12 +1,13 @@
 .tableOfContents {
   position: sticky;
   top: 100px;
-  padding: 20px;
+  padding: 16px;
   background: #F9F1E7;
   border-radius: 8px;
   max-height: calc(100vh - 120px);
   overflow-y: auto;
-  font-size: 14px;
+  font-size: 13px;
+  width: 100%;
 }
 
 .title {
