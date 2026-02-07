@@ -99,13 +99,13 @@
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
 @media only screen and (min-width: 1024px) {
   .container {
     max-width: 100%;
-    padding: 0 40px;
+    padding: 0 30px;
     margin: 0;
   }
 }
@@ -132,7 +132,7 @@
 .mainContent {
   flex: 1;
   min-width: 0;
-  max-width: 45%;
+  max-width: 100%;
 }
 
 .rightSidebar {
